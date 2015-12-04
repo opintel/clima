@@ -24,10 +24,14 @@
 
 	<!-- Leaflet -->
 	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+      <link rel="import" href="bower_components/polymer/polymer.html">
+      <link rel="import" href="bower_components/dgm-navbar/dgm-navbar.html">
+      <link rel="import" href="bower_components/dgm-footer/dgm-footer.html">
 
 </head>
 
 <body>	
+  <dgm-navbar></dgm-navbar>
 	<div class="container-clima">
 		<div class="row">
 			<div class="principal-navbar">
@@ -213,7 +217,7 @@
 		</div>
 	</div>	
 	<!-- /.container -->
-	<div class="black-footer">
+	<!-- <div class="black-footer">
 		<div class="lists-container center-block">
 			<div class="footer-lists">
 				<ul style="list-style-type: none; padding-left: 40px;">
@@ -268,7 +272,8 @@
 			</ul>
 			</div>
 		</div>			
-	</div>	
+	</div>	-->
+  <dgm-footer></dgm-footer>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -2065,6 +2070,7 @@ var map = L.map('map', {zoomControl: true}).setView([25.511791, -101.080072], 5)
 
 
 
-	</script>  
+	</script> 
+  <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script> 
 </body>	
 </html>

@@ -22,10 +22,14 @@
 
 	<!-- Custom styles for this template -->
 	<link href="css/main_style.css" rel="stylesheet">
+	<link rel="import" href="bower_components/polymer/polymer.html">
+	<link rel="import" href="bower_components/dgm-navbar/dgm-navbar.html">
+	<link rel="import" href="bower_components/dgm-footer/dgm-footer.html">
 
 </head>
 
 <body>	
+	<dgm-navbar></dgm-navbar>
 	<div class="container-clima">
 		<div class="row">
 			<div class="principal-navbar">
@@ -320,7 +324,7 @@
 		</div>	
     </div>
     <!-- /.container -->
-    <div class="black-footer">
+    <!-- <div class="black-footer">
 		<div class="lists-container center-block">
 			<div class="footer-lists">
 				<ul style="list-style-type: none; padding-left: 40px;">
@@ -375,7 +379,8 @@
 			</ul>
 			</div>
 		</div>			
-	</div>
+	</div> -->
+	<dgm-footer></dgm-footer>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -879,5 +884,6 @@
 		});
 
 	</script>  
+	<script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
   </body>	
 </html>
