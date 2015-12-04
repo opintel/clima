@@ -43,7 +43,7 @@
                   "value":"1.2%"
                }
             ],
-            "carbono_emissions":"26.2% (174 millones de toneladas CO2 eq.)"
+            "carbono_emissions":"26.2% (174 millones de toneladas CO<sub>2</sub> eq.)"
          },
         "generacion":{  
             "title":"Generación Eléctrica",
