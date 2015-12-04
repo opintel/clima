@@ -66,6 +66,10 @@ var chart = c3.generate({
           text: 'Emisiones Totales de CO2 (gigatoneladas)',
           position: 'outer-middle'
         }
+      },
+      legend: 
+      {
+          position: 'right'
       }
     },
     tooltip: {
