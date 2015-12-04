@@ -209,6 +209,7 @@ body {
 .custom-tooltip + .tooltip > .tooltip-arrow { border-top-color:white; }
 
 .map-year{
+	padding-top: 10px;
 	font-size: 22px;
 	cursor: pointer;
 }
@@ -234,7 +235,7 @@ body {
 }
 
 .map{
-	width: 711px;
+	width: 100%;
 }
 
 .select-text{
