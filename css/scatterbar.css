@@ -21,7 +21,8 @@
 }
 
 .d3-tip .info {
-    font-size: 11px;
+    background-color:  #8897b4;
+    font-size: 14px;
     color: #8897b4;
     display: block;
 }
