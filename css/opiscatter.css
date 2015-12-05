@@ -12,17 +12,18 @@
     line-height: 1;
     font-weight: bold;
     padding: 5px 12px;
-    background: rgba(0, 0, 0, 0.8);
+    background: #8897b4;
     color: #fff;
-    border-radius: 4px;
+    border-radius: 0px;
     line-height: 15px;
-    font-size: 12px;
+    font-size: 14px;
     min-width: 91px;
 }
 
 .d3-tip .info {
-    font-size: 11px;
-    color: #8897b4
+    background-color:  #8897b4;
+    font-size: 14px;
+    color: #8897b4;
     display: block;
 }
 
