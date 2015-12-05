@@ -40,15 +40,17 @@ body {
 .subtitle-landing{
 	font-size: 20px;
 }
+
 .landing-box{
 	width: 80%; 
 	background-color: #01CC99; 
-	font-size: 14px; 
+	font-size: 12px; 
 	color: white; 
 	margin-top: 15px; 
-	padding: 10px; 
-	height:70px;
-	border:2px solid #00D9A4;
+	padding: 2px; 
+
+	vertical-align: middle;	
+	height: 100%;
 	/* Vertical align */
 	/* Internet Explorer 10 */
 	display:-ms-flexbox;
