@@ -255,6 +255,9 @@
                  .text(function(d) { return " " + d.name; });*/
 
                 function transition(d) {
+                    // Hide tooltip when doing transitions
+                    mouseout(d);
+
                     if (transitioning || !d) return;
                     transitioning = true;
 
