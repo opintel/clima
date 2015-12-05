@@ -132,10 +132,10 @@
         } 
    },
    "item2":{  
-      "highlight":"12°",
-      "description":"País en Emisiones",
+      "highlight":"México",
+      "description":" produce 665304 Total en CO<sub>2</sub> eq al año",
       "imageUrl":"http://trebolbit.mx/cambio_climatico/img/green_towers.png",
-      "tooltipDescription":"México contribuye con sólo el 1.37% de las emisones globales de CO<sub>2</sub> derivadas de la quema de combustibles fósiles",
+      "tooltipDescription":"México contribuye con sólo el 1.37% (12º país en emisiones) de las emisones globales de CO2 derivadas de la quema de combustibles fósiles",
       "properties":{  
         "industria":{  
             "title":"Industria, Petróleo y Gas",
@@ -149,7 +149,7 @@
                   "value":"17.3%"
                }
             ],
-            "carbono_emissions":"29.4% (195 millones de toneladas CO<sub>2</sub> eq.)"
+            "carbono_emissions":"29.4% (195 millones de toneladas CO<2</sub> eq.)"
          },
         "fuentes":{  
             "title":"Fuentes móviles",
