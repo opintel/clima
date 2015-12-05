@@ -203,20 +203,6 @@
                  .append("text")
                  .text(function(d) { return " " + d.name; });*/
 
-                g.append("text")
-                        .attr("dy", ".75em")
-                        .text(function (d) {
-                            return d.name;
-                        })
-                        .call(text);
-
-                g.append("text")
-                        .attr("dy", "2em")
-                        .text(function (d) {
-                            return "$" + formatNumber(d.value) + " mdp";
-                        })
-                        .call(text);
-
                 function transition(d) {
                     if (transitioning || !d) return;
                     transitioning = true;
