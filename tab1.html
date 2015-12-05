@@ -19,7 +19,8 @@
 	<link href="css/c3-master/c3.css" rel="stylesheet" type="text/css">    
 
 	<link href="css/scatterbar.css" rel="stylesheet" type="text/css">
-
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	
 	<!-- Custom styles for this template -->
 	<link href="css/main_style.css" rel="stylesheet">
 	<link rel="import" href="bower_components/polymer/polymer.html">
@@ -37,7 +38,7 @@
 			<div class="climatic-title">
 				<a href="index.html" class="climatic-changetext" style="color:white;">Cambio Climático</a>
 			</div>
-			<div class="tab1-nav pull-right" style="padding-right: 30px">
+			<div class="tab1-nav pull-right">
 				<div class="top-tabs">
 					<a href="tab1.html">Emisiones</a>
 				</div>	
@@ -338,8 +339,8 @@
     <script src="js/csvjson.js"></script>    
 	
 	<script type="text/javascript">	
-				
-		$.ajax("http://opintel.github.io/clima/data/JSON3.json", {			
+		$.ajax("http://trebolbit.mx/cambio_climatico/data/JSON3.json", {					
+		//$.ajax("http://opintel.github.io/clima/data/JSON3.json", {			
 		    success: function(data){
 
 			    var item1 = data.item1;
