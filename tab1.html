@@ -94,7 +94,7 @@
 						</div>
 						<span class="box-text">
 							<strong><span id="item2-highlight" style="font-size:17px"></span></strong>
-							<span id="item2-description"></span>
+							<span id="item2-description"> produce 665,304 Total en CO<sub>2</sub> eq al año</span>
 						<span>
 					</div>								
 
@@ -203,7 +203,7 @@
 					Escenarios de emisiones de gases de efecto invernadero 2013-2030
 				</p>			
 				
-				<p class="subtitle" style="padding-top: 30px; padding-bottom: 30px;">
+				<p class="black-text" style="padding-top: 30px; padding-bottom: 30px;">
 					Megatoneladas de CO<sub>2</sub> equivalente
 				</p>			
 											
@@ -354,7 +354,7 @@
 				
 				$("#item2-img").attr("src", item2.imageUrl);
 				$("#item2-highlight").text(item2.highlight);
-				$("#item2-description").text(" " +item2.description);
+				$("#item2-description").html(" " +item2.description);
 				$("#item2").attr('title', item2.tooltipDescription).tooltip('fixTitle');				
 				
 				$("#item3-img").attr("src", item3.imageUrl);
