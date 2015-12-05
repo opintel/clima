@@ -6,6 +6,13 @@
 	src: url(OpenSans-Regular.ttf);
 }
 
+.row{
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
 body {
   background-color: #F6F6F6;
   color: #555;
@@ -14,12 +21,15 @@ body {
 
 #responsiveTabsContainer{
 	min-width: 750px;
-	padding: 30px;
+	width: 100%;	
+	padding-top: 15px;
 }
 
 .nav-content{
 	min-width: 750px;
 	max-width: 1150px;	
+	padding-left: 30px;
+	padding-right: 30px;
 }
 
 .nav-git-content{
@@ -40,17 +50,15 @@ body {
 .subtitle-landing{
 	font-size: 20px;
 }
-
 .landing-box{
 	width: 80%; 
 	background-color: #01CC99; 
-	font-size: 12px; 
+	font-size: 14px; 
 	color: white; 
 	margin-top: 15px; 
-	padding: 2px; 
-
-	vertical-align: middle;	
-	height: 100%;
+	padding: 10px; 
+	height:70px;
+	border:2px solid #00D9A4;
 	/* Vertical align */
 	/* Internet Explorer 10 */
 	display:-ms-flexbox;
@@ -91,9 +99,7 @@ body {
 
 .container-clima{
 	min-width: 750px;
-	max-width: 1050px;	
-	padding-right: 15px;
-    padding-left: 15px;
+	max-width: 1150px;	
     margin-right: auto;
     margin-left: auto;
 }
@@ -229,24 +235,27 @@ body {
 }
 
 .data-table-container{
- max-width: 750px;
- }
- .download-col{
- padding-top: 10px;
- background-color: #BFBFBF;
- vertical-align: middle;
- }
- .format-text{
- color:white;
- background-color: black;
- padding: 2px
- }
- .bottom-table{
- margin: 1px;
- }
- .name-info{
- background-color: #EEEEEE;
- }
+	min-width: 750px;
+	max-width: 1150px; 
+}
+ 
+.download-col{
+	padding-top: 10px;
+	background-color: #BFBFBF;
+	vertical-align: middle;
+}
+
+.format-text{
+	color:white;
+	background-color: black;
+	padding: 2px
+}
+.bottom-table{
+	margin: 1px;
+}
+.name-info{
+	background-color: #EEEEEE;
+}
 
  
 .custom-tooltip + .tooltip > .tooltip-inner {background-color: white; color: black; text-align: left; font-weight: bold;}
@@ -382,7 +391,6 @@ body {
 .climatic-title{
 	height: 60px;
     width: 121px;
-    margin-left: 31px;
     padding-top: 16px;
     display: inline-block;
 }
@@ -436,6 +444,8 @@ a:visited{
 
 .indicators-table{
 	width: 100%;
+	margin-left: -3px;
+	margin-right: -3px;	
 }
 .indicator-box{
 	width: 100%;
@@ -443,11 +453,15 @@ a:visited{
 	font-size: 15px;
 	padding: 5px;
 	height: 80px;
+	margin-left: -3px;
+	margin-right: -3px;			
 } 
+
 .indicators-row{
 	width: 16.66%;	
-	padding: 3px;						    
+	padding: 3px;
 }
+
 #indicator1{
 	background-color: #0B0B0B;
 }
@@ -485,6 +499,15 @@ a:visited{
 	background-color: #0FCC98;
 }
 
+.indicator-dialog{
+	width: 99.6%;							
+	margin: 3px;
+	color: white;
+	padding: 10px;
+	display: none;
+	margin-left: -3px;
+	margin-right: -3px;		
+}
 
 .titles-databar{
 	width: 100%;
