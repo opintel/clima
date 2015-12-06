@@ -99,7 +99,7 @@
             d3.select("#tooltip #heading")
               .text(d.name);
             d3.select("#tooltip #revenue")
-              .text("$" + formatNumber(d.value) + " mdp");
+              .text("$" + formatNumber(d.value) + " pesos");
             d3.select("#tooltip").classed("hidden", false);
         };
 
@@ -239,7 +239,7 @@
                         .call(rect)
                         .append("title")
                         .text(function (d) {
-                            return "$" + formatNumber(d.value) + " mdp | ";
+                            return "$" + formatNumber(d.value) + " pesos | ";
                         })
                         .append("text")
                         .text(function (d) {
@@ -250,7 +250,7 @@
                  .attr("class", "child")
                  .call(rect)
                  .append("title")
-                 .text(function(d) { return "$" + formatNumber(d.value)+ " mdp | "; })
+                 .text(function(d) { return "$" + formatNumber(d.value)+ " pesos | "; })
                  .append("text")
                  .text(function(d) { return " " + d.name; });*/
 
