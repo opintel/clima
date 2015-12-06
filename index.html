@@ -22,6 +22,7 @@
 	<link rel="import" href="bower_components/dgm-navbar/dgm-navbar.html">
 	<link rel="import" href="bower_components/dgm-footer/dgm-footer.html">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:Bold' rel='stylesheet' type='text/css'>	
 	<style>
 		body{
 			background-color: #DEDEDE;
@@ -65,16 +66,16 @@
 			<div class="container" id="responsiveTabsContainer">
 				
 				<div class="row">
-					<!--div class="col-xs-4">
+					<div class="col-xs-4">
 						<p class="subtitle-landing"><strong>Emisiones</strong></p>
 						<div style="height:2px; width:100%; background-color: #808080"></div>
 						<div class="vinetas-list">
-							<ul class="special-lists">
-								<li class="special-listitem">Cambio Climático en México</li>
-								<li class="special-listitem">Gases Efecto Invernadero</li>
-								<li class="special-listitem">Indicadores</li>
+							<ul class="special-listsul">
+								<li class="special-listsli"><p class="speciallist-text">Cambio Climático en México</p></li>
+								<li class="special-listsli"><p class="speciallist-text">Gases Efecto Invernadero</p></li>
+								<li class="special-listsli"><p class="speciallist-text">Indicadores</p></li>
 							</ul>	
-						</div-->	
+						</div>	
 						<div style="height:50px">
 							<div class="app-buttons">
 								<a href="tab1.html" class="text-center app-link"><strong>
@@ -87,6 +88,13 @@
 					<div class="col-xs-4">
 						<p class="subtitle-landing"><strong>Act. económicas</strong></p>
 						<div style="height:2px; width:100%; background-color: #808080"></div>
+						<div class="vinetas-list">
+							<ul class="special-listsul">
+								<li class="special-listsli"><p class="speciallist-text">Emisiones de carbono por sector económico</p></li>
+								<li class="special-listsli"><p class="speciallist-text">Gases Efecto Invernadero</p></li>
+								<li class="special-listsli"><p class="speciallist-text">Compara emisiones</p></li>
+							</ul>	
+						</div>
 						<!--div style="height:50px">
 							<div class="landing-box">
 								<p class="text-center" style="margin:0px;"><strong>Encuentra qué sector emite más gases.</strong></p>	
@@ -101,7 +109,13 @@
 					
 					<div class="col-xs-4">
 						<p class="subtitle-landing"><strong>Implicaciones</strong></p>
-						<div style="height:2px; width:100%; background-color: #808080"></div>						
+						<div style="height:2px; width:100%; background-color: #808080"></div>
+						<div class="vinetas-list">
+							<ul class="special-listsul">
+								<li class="special-listsli"><p class="speciallist-text">Consecuencias del Cambio Climático</p></li>
+								<li class="special-listsli"><p class="speciallist-text">Impactos ambientales</p></li>
+							</ul>	
+						</div>						
 						<div class="app-buttons">
 							<a href="tab3.html" class="text-center app-link" >
 								<strong>Descubre cuántos incendios forestales hay al año.</strong>
@@ -115,7 +129,14 @@
 					</div>	
 					<div class="col-xs-4">
 						<p class="subtitle-landing"><strong>Acciones</strong></p>
-						<div style="height:2px; width:100%; background-color: #808080"></div>						
+						<div style="height:2px; width:100%; background-color: #808080"></div>
+						<div class="vinetas-list">
+							<ul class="special-listsul">
+								<li class="special-listsli"><p class="speciallist-text">Ley de Cambio Climático</p></li>
+								<li class="special-listsli"><p class="speciallist-text">Programa Especial de Cambio Climático</p></li>
+								<li class="special-listsli"><p class="speciallist-text">Presupuesto</p></li>
+							</ul>	
+						</div>						
 						<div class="app-buttons">
 							<a href="tab4.html" class="text-center app-link">
 								<strong>Descubre qué está haciendo México para cambiarlo.</strong>
@@ -132,14 +153,29 @@
 						<div style="height:2px; width:100%; background-color: #808080"></div>
 						<br>
 						<br>
-						<div class="col-xs-3" style="font-size: 17px;">
-							<a style="color: #00D9A4;" href="http://semarnat.gob.mx/" class=""><strong>SEMARNAT</strong></a>
-							<br><br>	
-							<a style="color: #00D9A4;" href="www.inecc.gob.mx/" class=""><strong>INECC</strong></a>	
+						<div class="col-xs-3" style="font-size: 14px;">
+							<a style="color: #00D9A4;" href="http://www.semarnat.gob.mx/" target="_blank" class="">
+								<strong>Secretaría del Medio Ambiente y Recursos Naturales</strong>
+							</a>
+						</div>
+
+						<div class="col-xs-3" style="font-size: 14px;">
+							<a style="color: #00D9A4;" href="http://www.inecc.gob.mx/" target="_blank" class="">
+								<strong>Instituto Nacional de Ecología y Cambio Climático</strong>
+							</a>
+						</div>
+												
+						<div class="col-xs-3" style="font-size: 14px;">
+							<a style="color: #00D9A4;" href="http://www.inecc.gob.mx/descargas/cclimatico/2015_bur_mexico_low_resolution.pdf" target="_blank" class="">
+								<strong>INERCC y SEMARNAT 2015. Primer Informe Bienal de Actualización ante la Convención Macro de las Nacionales Unidas sobre el Cambio Climático.</strong>
+							</a>
 						</div>						
-						<div class="col-xs-8" style="font-size: 17px;">
-							<p class=""><strong>El calentamiento global, por su parte es la manifestación mas evidente del cambio climático y se refiere al incremento promedio de las temperaturas terrestres y marítimas globales.</strong></p>	
-						</div>			
+						
+						<div class="col-xs-3" style="font-size: 14px;">
+							<a style="color: #00D9A4;" href="http://www.semarnat.gob.mx/sites/default/files/documentos/mexico_indc_espanolv2.pdf" target="_blank" class="">
+								<strong>Contribuciones Previstas y Determinadas a Nivel Nacional</strong>
+							</a>
+						</div>						
 					</div>									
 				</div>					
 			</div>

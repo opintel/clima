@@ -657,23 +657,24 @@ a:visited{
 }
 
 .vinetas-list{
-	font-size: 19px;
+	font-size: 16px;
     line-height: 25px;
+    height: 152px;
 }
 
-/*special-lists{
-	list-style: none;
-    padding:0;
-    margin:0;
-}*/
-
-special-listitem{ 
-    padding-left: 1em; 
-    text-indent: -.7em;
+.special-listsul{
+    color: #19CC93;
+    list-style-type: disc;
+    padding-left: 18px;
 }
 
-li:before {
-    content: "•";
-    color: #19CC93; /* or whatever color you prefer */
+.special-listsli{
+    color: #19CC93;
+    list-style-type: disc;
+    padding-left: 0px;
+}
+
+.speciallist-text{
+	color: #808080;
 }
 
