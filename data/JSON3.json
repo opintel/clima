@@ -2,7 +2,7 @@
    "item1":{  
       "highlight":"0.85°C",
       "description":"Incremento de temperatura nacional",
-      "imageUrl":"http://opintel.github.io/clima/img/item1_on.png",
+      "imageUrl":"http://opintel.github.io/clima/img/item1_on.svg",
       "tooltipDescription":"Desde la década de los años sesenta, México se ha vuelto más cálido. Las temperaturas promedio a nivel nacional han aumentado 0.85°C",
       "properties":{  
         "industria":{  
