@@ -126,7 +126,7 @@
 				<!-- Tabla hardcodeada -->				
 				<div class="row">
 					<table style="width:100%; font-size: 13px;" class="table table-striped">
-						<tr style="border-top: #C5C5C5 solid">
+						<tr style="border-top: #C5C5C5 solid; border-width:1px">
 							<td style="width:16.66%;"></td> 
 							<td style="width:16.66%;"><strong><p>Industria, petróleo y gas</p></strong></td> 
 							<td style="width:16.66%;"><strong><p>Fuentes Móviles</p></strong></td> 
@@ -134,7 +134,7 @@
 							<td style="width:16.66%;"><strong><p>Agropecuario y USUCSS</p></strong></td> 
 							<td style="width:16.66%;"><strong><p>Residuos Residencial y Comercial</p></strong></td> 
 						</tr>
-						<tr style="border-top: #C5C5C5 solid">
+						<tr style="border-top: #C5C5C5 solid; border-width:1px">
 							<td style="width:16.66%;"><strong><p>Emisiones del sector</p></strong></td> 
 							<td style="width:16.66%;"><strong><p>29.4%(195 millones de toneladas de CO2 eq.)</p></strong></td> 
 							<td style="width:16.66%;"><strong><p>29.4%(195 millones de toneladas de CO2 eq.)</p></strong></td> 
@@ -143,7 +143,7 @@
 							<td style="width:16.66%;"><strong><p>29.4%(195 millones de toneladas de CO2 eq.)</p></strong></td> 
 						</tr>
 						
-						<tr style="border-top: #C5C5C5 solid">
+						<tr style="border-top: #C5C5C5 solid; border-width:1px">
 							<td style="width:16.66%;"><strong><p>Desagregado</p></strong></td> 
 							<td style="width:16.66%;">
 								<p>
@@ -248,8 +248,9 @@
 					<p class="black-text" style="padding-top: 30px; padding-bottom: 30px;">
 						Megatoneladas de CO<sub>2</sub> equivalente
 					</p>			
-					
+					<div class="center-block" style="width: 700px;">
 					<div id="chart"></div>
+					</div>
 				</div>
 
 				<!-- Data table-->
@@ -411,8 +412,9 @@
 	<script type="text/javascript" src="js/timeseries.js"></script>	
 
 	<script type="text/javascript">	
-		//$.ajax("http://trebolbit.mx/cambio_climatico/data/JSON3.json", {					
-		$.ajax("http://opintel.github.io/clima/data/JSON3.json", {			
+		
+		$.ajax("http://trebolbit.mx/cambio_climatico/data/JSON3.json", {					
+		//$.ajax("http://opintel.github.io/clima/data/JSON3.json", {			
 		    success: function(data){
 
 			    var item1 = data.item1;
@@ -435,12 +437,6 @@
 				$("#item3-description").text(" " +item3.description);
 				$("#item3").attr('title', item3.tooltipDescription).tooltip('fixTitle');				
 
-				/*
-				$("#item4-img").attr("src", item4.imageUrl);
-				$("#item4-highlight").text(item4.highlight);
-				$("#item4-description").text(" " +item4.description);
-				$("#item4").attr('title', item4.tooltipDescription).tooltip('fixTitle');
-				*/				
 
 		    },
 		    error: function(err){

@@ -16,7 +16,10 @@ var chart = c3.generate({
                 format: '%Y'
             }
         }
-    }
+    },
+	legend: {
+		position: 'right'
+	}    
 });
 
 

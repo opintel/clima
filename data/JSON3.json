@@ -2,7 +2,7 @@
    "item1":{  
       "highlight":"0.85°C",
       "description":"Incremento de temperatura nacional",
-      "imageUrl":"http://trebolbit.mx/cambio_climatico/img/green_towers.png",
+      "imageUrl":"http://opintel.github.io/clima/img/item1_off.png",
       "tooltipDescription":"Desde la década de los años sesenta, México se ha vuelto más cálido. Las temperaturas promedio a nivel nacional han aumentado 0.85°C",
       "properties":{  
         "industria":{  
@@ -134,7 +134,7 @@
    "item2":{  
       "highlight":"México",
       "description":" produce 665,304 Total en CO<sub>2</sub> eq al año",
-      "imageUrl":"http://trebolbit.mx/cambio_climatico/img/green_towers.png",
+      "imageUrl":"http://opintel.github.io/clima/img/item2_off.svg",
       "tooltipDescription":"México contribuye con sólo el 1.37% (12º país en emisiones) de las emisones globales de CO2 derivadas de la quema de combustibles fósiles",
       "properties":{  
         "industria":{  
@@ -266,7 +266,7 @@
    "item3":{  
       "highlight":"22%",
       "description":"En reducción de emisiones de gases efecto invernadero",
-      "imageUrl":"http://trebolbit.mx/cambio_climatico/img/green_towers.png",
+      "imageUrl":"http://opintel.github.io/clima/img/item3_off.svg",
       "tooltipDescription":"Para el 2030, México reducirá sus emisiones de GEI en un 22% y 51% de carbono negro con relación al 2013",
       "properties":{  
         "industria":{  

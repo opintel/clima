@@ -66,12 +66,11 @@ var chart = c3.generate({
           text: 'Emisiones Totales de CO2 (gigatoneladas)',
           position: 'outer-middle'
         }
-      },
-      legend: 
-      {
-          position: 'right'
       }
     },
+	legend: {
+		position: 'right'
+	},    
     tooltip: {
     contents: function (data, defaultTitleFormat, defaultValueFormat, color, sectores) {
         var $$ = this, config = $$.config,
