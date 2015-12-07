@@ -1,23 +1,57 @@
-/*
- * Globals
- */
-@font-face{
-	font-family: OpenSans;
-	src: url(OpenSans-Regular.ttf);
+
+.row{
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-left: 30px;
+	padding-right: 30px;
 }
+
+.app-buttons{
+	margin-top: 15px;
+}
+
+.app-link{ 
+	display: block; 
+	margin-bottom: 10px; 
+	padding: 3px 20px; 
+	background-color: #0c9; 
+	border-bottom: 3px solid #096; 
+	color: #fff !important; 
+	font-size: 12px; 
+	font-weight: 400; 
+	line-height: 18px; 
+	background-repeat: no-repeat; 
+	background-position: 10px 50%; 
+}
+
+.app-link:hover{ background-color: #00b386; color: #fff;}
+
+.app-link{ display: block; font-weight: 600; text-transform: uppercase; }
+
 
 body {
   background-color: #F6F6F6;
   color: #555;
-  
+  font-family: 'Open Sans', sans-serif;	
 }
 
 #responsiveTabsContainer{
 	min-width: 750px;
-	padding: 30px;
+	width: 100%;	
+	padding-top: 15px;
 }
 
+.nav-content{
+	min-width: 750px;
+	max-width: 1150px;	
+	padding-left: 30px;
+	padding-right: 30px;
+}
 
+.nav-git-content{
+	min-width: 750px;
+	max-width: 100%;	
+}
 /*
  * Masthead for nav
  */
@@ -29,13 +63,47 @@ body {
           box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
 }
 
+.subtitle-landing{
+	font-size: 20px;
+}
+.landing-box{
+	width: 80%; 
+	background-color: #01CC99; 
+	font-size: 14px; 
+	color: white; 
+	margin-top: 15px; 
+	padding: 10px; 
+	height:70px;
+	border:2px solid #00D9A4;
+	/* Vertical align */
+	/* Internet Explorer 10 */
+	display:-ms-flexbox;
+	-ms-flex-pack:center;
+	-ms-flex-align:center;
+	
+	/* Firefox */
+	display:-moz-box;
+	-moz-box-pack:center;
+	-moz-box-align:center;
+	
+	/* Safari, Opera, and Chrome */
+	display:-webkit-box;
+	-webkit-box-pack:center;
+	-webkit-box-align:center;
+	
+	/* W3C */
+	display:box;
+	box-pack:center;
+	box-align:center;			
+}
+
 /* Nav links */
 .blog-nav-item {
   position: relative;
   display: inline-block;
   padding: 10px;
   font-weight: 500;
-  color: #EEEEEE !important;
+  color: transparent !important;
 }
 .blog-nav-item:hover,
 .blog-nav-item:focus {
@@ -47,14 +115,14 @@ body {
 
 .container-clima{
 	min-width: 750px;
-	padding-right: 15px;
-    padding-left: 15px;
+	max-width: 1150px;	
     margin-right: auto;
     margin-left: auto;
 }
 
 .container-clima-landing{
 	min-width: 750px;
+	max-width: 1150px;		
     margin-right: auto;
     margin-left: auto;
 }
@@ -107,10 +175,9 @@ body {
 	background-color: #24C192;
 	color: white;
 	border-style: solid;
-	border-color: #EEEEEE;		
+	border-color: #F6F6F6;		
 	padding: 10px;
 	margin-top: 5px;
-	margin-bottom: 15px;
 	overflow: scroll;	
 	display: inline-block;	
 }
@@ -183,24 +250,26 @@ body {
 }
 
 .data-table-container{
- max-width: 750px;
- }
- .download-col{
- padding-top: 10px;
- background-color: #BFBFBF;
- vertical-align: middle;
- }
- .format-text{
- color:white;
- background-color: black;
- padding: 2px
- }
- .bottom-table{
- margin: 1px;
- }
- .name-info{
- background-color: #EEEEEE;
- }
+	
+}
+ 
+.download-col{
+	padding-top: 10px;
+	background-color: #BFBFBF;
+	vertical-align: middle;
+}
+
+.format-text{
+	color:white;
+	background-color: black;
+	padding: 2px
+}
+.bottom-table{
+	margin: 1px;
+}
+.name-info{
+	background-color: #EEEEEE;
+}
 
  
 .custom-tooltip + .tooltip > .tooltip-inner {background-color: white; color: black; text-align: left; font-weight: bold;}
@@ -208,6 +277,7 @@ body {
 .custom-tooltip + .tooltip > .tooltip-arrow { border-top-color:white; }
 
 .map-year{
+	padding-top: 10px;
 	font-size: 22px;
 	cursor: pointer;
 }
@@ -233,7 +303,7 @@ body {
 }
 
 .map{
-	width: 711px;
+	width: 100%;
 }
 
 .select-text{
@@ -322,25 +392,22 @@ body {
 
 
 /*NAV BAR NEW*/
-
-
-
 .principal-navbar{
 	background-color: #0FCC98;
-	width: 100%;
+	min-width: 750px;
+	width:100%;
     height: 45px;
 }
 
 .climatic-title{
 	height: 60px;
     width: 121px;
-    margin-left: 31px;
     padding-top: 16px;
     display: inline-block;
 }
 
 .climatic-changetext{
-	font-size: 15px;
+	font-size: 14px;
     color: white;
 }
 
@@ -348,7 +415,7 @@ body {
 	display: inline-block;
 }
 .nav-tab-active{
-	color: white;
+	color: white !important;
 }
 .top-tabs{
 	color: gray;
@@ -384,10 +451,14 @@ a:visited{
 	font-size: 16px;
     font-weight: bold;
     color: #4A4A4A;
+	padding-top: 30px;
+	padding-bottom: 20px;    
 }
 
 .indicators-table{
 	width: 100%;
+	margin-left: -3px;
+	margin-right: -3px;	
 }
 .indicator-box{
 	width: 100%;
@@ -395,11 +466,15 @@ a:visited{
 	font-size: 15px;
 	padding: 5px;
 	height: 80px;
+	margin-left: -3px;
+	margin-right: -3px;			
 } 
+
 .indicators-row{
 	width: 16.66%;	
-	padding: 3px;						    
+	padding: 3px;
 }
+
 #indicator1{
 	background-color: #0B0B0B;
 }
@@ -437,10 +512,17 @@ a:visited{
 	background-color: #0FCC98;
 }
 
+.indicator-dialog{
+	background-color: white;
+	width: 99.6%;							
+	margin: 3px;
+	color: black !important;
+	padding: 10px;
+	display: none;
+}
 
-.titles-databar{
-	width: 100%;
-    height: 26px;
+.bloque{
+	display: inline-block;
 }
 
 .data-bar{
@@ -456,78 +538,75 @@ a:visited{
 }
 
 .description-databar{
-	width: 36%;
     font-size: 8px;
     padding: 16px;
     float: left;
-}
-
-.name-databar{
-	width: 13%;
-    font-size: 10px;
-    margin-left: 44px;
-    font-weight: bold;
-    float: left;
-}
-
-.dependence-databar{
-	width: 13%;
-    font-size: 10px;
-    margin-left: 134px;
-    font-weight: bold;
-    float: left;
-}
-
-.date-databar{
-	width: 13%;
-    font-size: 10px;
-    margin-left: 66px;
-    font-weight: bold;
-    float: left;
-}
-
-.format-databar{
-	width: 13%;
-    font-size: 10px;
-    margin-left: 30px;
-    font-weight: bold;
-    float: left;
+    width:30%;    
 }
 
 .secretary-databar{
 	float: left;
     font-size: 9px;
     padding: 16px;
+    width:20%;    
 }
 
 .datetext-databar{
 	float: left;
     font-size: 9px;
     padding: 16px;
-    margin-left: 45px;
+    width:15%;    
 }
 
 .formatcontainer-databar{
 	float: left;
-    padding: 16px;
-    margin-left: 33px;
-    /*background-color: black;*/
     height: 30px;
-    width: 111px;
+    width:20%;    
 }
 
-.csv-format{
-	float: left;
-    background-color: #FED100;
-    margin-top: 0px;
-    height: 19px;
-    width: 37px;
+.greyblock-databar{
+	background-color: #555555;
+	height: 68px;
+	width: 15%;
+}
+
+
+.name-databar{
+    font-size: 10px;
+    font-weight: bold;
+    float: left;
+}
+
+.dependence-databar{
+    font-size: 10px;
+    font-weight: bold;
+    float: left;
+}
+
+.date-databar{
+    font-size: 10px;
+    font-weight: bold;
+    float: left;
+}
+
+.format-databar{
+    font-size: 10px;
+    font-weight: bold;
+    float: left;
 }
 
 .klm-format{
 	float: left;
     background-color: black;
-    margin-top: 0px;
+    margin-top: 20px;
+    height: 19px;
+    width: 37px;
+}
+
+.csv-format{
+	float: left;
+    background-color: #FED100;
+    margin-top: 20px;
     height: 19px;
     width: 37px;
 }
@@ -538,16 +617,11 @@ a:visited{
     color: white;
 }
 
-.greyblock-databar{
-	background-color: #555555;
-	height: 68px;
-	width: 55px;
-}
-
 .green-bars{
-	width: 44%;
-    margin-top: 35px;
-    margin-left: 14px;
+	margin-top: 20px;
+	width: 60px;
+    height: 50px;
+    padding: 10px;
 }
 
 .black-footer{
@@ -583,16 +657,25 @@ a:visited{
 	max-width: 750px;
 }
 
+.vinetas-list{
+	font-size: 16px;
+    line-height: 25px;
+    height: 152px;
+}
 
+.special-listsul{
+    color: #19CC93;
+    list-style-type: disc;
+    padding-left: 18px;
+}
 
+.special-listsli{
+    color: #19CC93;
+    list-style-type: disc;
+    padding-left: 0px;
+}
 
-
-
-
-
-
-
-
-
-
+.speciallist-text{
+	color: #808080;
+}
 

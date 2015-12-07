@@ -2,7 +2,7 @@
    "item1":{  
       "highlight":"0.85°C",
       "description":"Incremento de temperatura nacional",
-      "imageUrl":"http://trebolbit.mx/cambio_climatico/img/green_towers.png",
+      "imageUrl":"http://opintel.github.io/clima/img/item1_on.svg",
       "tooltipDescription":"Desde la década de los años sesenta, México se ha vuelto más cálido. Las temperaturas promedio a nivel nacional han aumentado 0.85°C",
       "properties":{  
         "industria":{  
@@ -17,7 +17,7 @@
                   "value":"17.3%"
                }
             ],
-            "carbono_emissions":"29.4% (195 millones de toneladas CO2 eq.)"
+            "carbono_emissions":"29.4% (195 millones de toneladas CO<sub>2</sub> eq.)"
          },
         "fuentes":{  
             "title":"Fuentes móviles",
@@ -43,7 +43,7 @@
                   "value":"1.2%"
                }
             ],
-            "carbono_emissions":"26.2% (174 millones de toneladas CO2 eq.)"
+            "carbono_emissions":"26.2% (174 millones de toneladas CO<sub>2</sub> eq.)"
          },
         "generacion":{  
             "title":"Generación Eléctrica",
@@ -73,7 +73,7 @@
                   "value":"0.70%"
                }
             ],
-            "carbono_emissions":"19% (127 millones de toneladas CO2 eq.)"
+            "carbono_emissions":"19% (127 millones de toneladas CO<sub>2</sub> eq.)"
          },
         "agropecuario":{  
             "title":"Agropecuario, uso de suelo y silvicultura",
@@ -87,7 +87,7 @@
                   "value":"5.6%"
                }
             ],
-            "carbono_emissions":"16.9% (112 millones de toneladas CO2 eq.)"
+            "carbono_emissions":"16.9% (112 millones de toneladas CO<sub>2</sub> eq.)"
          },
         "residuos":{  
             "title":"Residuos, residencial y comercial",
@@ -101,7 +101,7 @@
                   "value":"3.9%"
                }
             ],
-            "carbono_emissions":"8.5% (57 millones de toneladas CO2 eq.)"
+            "carbono_emissions":"8.5% (57 millones de toneladas CO<sub>2</sub> eq.)"
          },
         "carbono":{  
             "title":"Carbono negro",
@@ -127,15 +127,15 @@
                   "value":"6.8%"
                }
             ],
-            "carbono_emissions":"125 miles de toneladas de CO2 eq."
+            "carbono_emissions":"125 miles de toneladas de CO<sub>2</sub> eq."
          }                                             
         } 
    },
    "item2":{  
-      "highlight":"12°",
-      "description":"País en Emisiones",
-      "imageUrl":"http://trebolbit.mx/cambio_climatico/img/green_towers.png",
-      "tooltipDescription":"México contribuye con sólo el 1.37% de las emisones globales de CO2 derivadas de la quema de combustibles fósiles",
+      "highlight":"México",
+      "description":" produce 665,304 Total en CO<sub>2</sub> eq al año",
+      "imageUrl":"http://opintel.github.io/clima/img/item2_on.svg",
+      "tooltipDescription":"México contribuye con sólo el 1.37% (12º país en emisiones) de las emisones globales de CO2 derivadas de la quema de combustibles fósiles",
       "properties":{  
         "industria":{  
             "title":"Industria, Petróleo y Gas",
@@ -149,7 +149,7 @@
                   "value":"17.3%"
                }
             ],
-            "carbono_emissions":"29.4% (195 millones de toneladas CO2 eq.)"
+            "carbono_emissions":"29.4% (195 millones de toneladas CO<2</sub> eq.)"
          },
         "fuentes":{  
             "title":"Fuentes móviles",
@@ -175,7 +175,7 @@
                   "value":"1.2%"
                }
             ],
-            "carbono_emissions":"26.2% (174 millones de toneladas CO2 eq.)"
+            "carbono_emissions":"26.2% (174 millones de toneladas CO<sub>2</sub> eq.)"
          },
         "generacion":{  
             "title":"Generación Eléctrica",
@@ -205,7 +205,7 @@
                   "value":"0.70%"
                }
             ],
-            "carbono_emissions":"19% (127 millones de toneladas CO2 eq.)"
+            "carbono_emissions":"19% (127 millones de toneladas CO<sub>2</sub> eq.)"
          },
         "agropecuario":{  
             "title":"Agropecuario, Uso de suelo y Silvicultura",
@@ -219,7 +219,7 @@
                   "value":"5.6%"
                }
             ],
-            "carbono_emissions":"16.9% (112 millones de toneladas CO2 eq.)"
+            "carbono_emissions":"16.9% (112 millones de toneladas CO<sub>2</sub> eq.)"
          },
         "residuos":{  
             "title":"Residuos, residencial y comercial",
@@ -233,7 +233,7 @@
                   "value":"3.9%"
                }
             ],
-            "carbono_emissions":"8.5% (57 millones de toneladas CO2 eq.)"
+            "carbono_emissions":"8.5% (57 millones de toneladas CO<sub>2</sub> eq.)"
          },
         "carbono":{  
             "title":"Carbono negro",
@@ -259,14 +259,14 @@
                   "value":"6.8%"
                }
             ],
-            "carbono_emissions":"125 miles de toneladas de CO2 eq."
+            "carbono_emissions":"125 miles de toneladas de CO<sub>2</sub> eq."
          }                                             
         } 
    },
    "item3":{  
       "highlight":"22%",
       "description":"En reducción de emisiones de gases efecto invernadero",
-      "imageUrl":"http://trebolbit.mx/cambio_climatico/img/green_towers.png",
+      "imageUrl":"http://opintel.github.io/clima/img/item3_on.svg",
       "tooltipDescription":"Para el 2030, México reducirá sus emisiones de GEI en un 22% y 51% de carbono negro con relación al 2013",
       "properties":{  
         "industria":{  
@@ -307,7 +307,7 @@
                   "value":""
                }
             ],
-            "carbono_emissions":"16.9% (112 millones de toneladas CO2 eq.)"
+            "carbono_emissions":"16.9% (112 millones de toneladas CO<sub>2</sub> eq.)"
          },
         "residuos":{  
             "title":"Carbono negro",

@@ -41,7 +41,9 @@
 	margin-left: -8px;
 }
 
-$base-color:#741114;
+/* 
+$base-color: #741114;
+
 body {font-family: 'Raleway', sans-serif;}
 .button {
   padding:10px;
@@ -58,3 +60,4 @@ body {font-family: 'Raleway', sans-serif;}
   margin-left:10px;
 } //default graphic styles provided by default c3 css
 .center {text-align:center;}
+*/

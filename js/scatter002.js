@@ -68,6 +68,9 @@ var chart = c3.generate({
         }
       }
     },
+	legend: {
+		position: 'right'
+	},    
     tooltip: {
     contents: function (data, defaultTitleFormat, defaultValueFormat, color, sectores) {
         var $$ = this, config = $$.config,

@@ -21,52 +21,63 @@
 
 	<!-- Custom styles for this template -->
 	<link href="css/main_style.css" rel="stylesheet">
-
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:Bold' rel='stylesheet' type='text/css'>	
 	<!-- Leaflet -->
 	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+      <link rel="import" href="bower_components/polymer/polymer.html">
+      <link rel="import" href="bower_components/dgm-navbar/dgm-navbar.html">
+      <link rel="import" href="bower_components/dgm-footer/dgm-footer.html">
 
 </head>
 
 <body>	
-	<div class="container-clima">
-		<div class="row">
-			<div class="principal-navbar">
-				<div class="climatic-title">
-					<a href="index.html" class="climatic-changetext" style="color:white;">Cambio Climático</a>
+  <dgm-navbar></dgm-navbar>
+  <div class="principal-navbar">
+		<div class="nav-content center-block">
+			<div class="climatic-title">
+				<a href="index.html" class="climatic-changetext" style="color:white;">Cambio Climático</a>
+			</div>
+			<div class="tab1-nav pull-right">
+				<div class="top-tabs">
+					<a href="tab1.html">Emisiones</a>
+				</div>	
+				<div class="top-tabs">
+					<a href="tab2.html"class="nav-tab-active"><p>Actividades económicas</p></a>
 				</div>
-				<div class="tab1-nav pull-right" style="padding-right: 30px">
-					<div class="top-tabs">
-						<a href="tab1.html">Cambio Climático</a>
-					</div>	
-					<div class="top-tabs">
-						<a href="tab2.html"><p class="nav-tab-active">¿Por qué pasa?</p></a>
-					</div>
-					<div class="top-tabs">
-						<a href="tab3.html">¿Cómo me afecta?</a>
-					</div>			
-					<div class="top-tabs">
-						<a href="tab4.html">Acciones</a>
-					</div>															
+				<div class="top-tabs">
+					<a href="tab3.html"><p>Implicaciones</p></a>
 				</div>			
-			</div>	
+				<div class="top-tabs">
+					<a href="tab4.html">Acciones</a>
+				</div>															
+			</div>
+		</div>
+	</div>
+	<div class="container-clima">
+		<div class="row">	
 			<div id="responsiveTabsContainer">
 				
 				<div id="tab-3"> 
-					<p class="huge-title">¿Por qué pasa?</p>
+					<p class="huge-title">Actividades económicas</p>
 					<p class="black-text">
 						El cambio climático que hoy enfrentamos está vinculado a la quema de combustibles fósiles, especialmente carbón, gas y petróleo, y a la deforestación, es decir, a la pérdida de superficie forestal. Ambos fenómenos tienen como consecuencia una disminución en la capacidad de absorción y un aumento excesivo en la emisión de gases de efecto invernadero (GEI) hacia la atmósfera, mismos que incrementan la temperatura del planeta
 
 					</p>
-					<p class="subtitle" style="padding-top: 20px;">
-						Emisiones de carbono (Co<sub>2</sub>) por sector de la economía
-					</p>    
+					<p class="subtitle">
+						Emisiones de carbono (Mt en CO<sub>2</sub>eq. ) por actividad económica (PIB)
+					</p> </br>
+					<p class="black-text">El tamaño de la bola representa el costo en emisiones de cada peso de PIB generado</p>   
 					<div class="row">
 						<div class="col-xs-12">
 							<div id="chart"></div>
 						</div>	
 					</div>	
-					
-					<p class="subtitle" style="padding-bottom: 20px;">Gases efecto invernadero</p>
+
+					<p class="subtitle">
+						Actividades relacionadas a la emisión de gases de efecto invernadero.
+					</p>
+					<p class="black-text" style="padding-bottom: 20px; padding-top: 20px;">Conoce las actividades que producen gases de efecto invernadero y su evolución en el tiempo</p>
 					<div class="select-container">
 						<p class="text-center select-text">
 							Selecciona un indicador 
@@ -88,132 +99,143 @@
 					</div>
 					<br>
 					<!-- Data table-->
-					<div class="">
-						<h4 class="subtitle"><strong>Datos</strong></h4>	
-						<div class="data-table-container center-block">
-							<br>
-							<div class="titles-databar">
-								<div class="name-databar">
-									<img class="triangle-image" src="img/triangle.svg">
-									<p>Nombre</p>
-								</div>						
-								<div class="dependence-databar">
-									<img class="triangle-image" src="img/triangle.svg">
-									<p>Dependencia</p>
-								</div>
-								<div class="date-databar">
-									<img class="triangle-image" src="img/triangle.svg">
-									<p>Fecha</p>
-								</div>
-								<div class="format-databar">
-									<img class="triangle-image" src="img/triangle.svg">
-									<p>Formato</p>
-								</div>
-							</div>		
-							<div class="data-bar">
-								<div class="description-databar">
-									<p>EMPRESAS PRODUCTORAS DE MINERALES METÁLICOS Y NO METÁLICOS, EMBAJADAS, INSTIT...POPULAR</p> 
-								</div>	
-								<div class="secretary-databar">
-									<p>Secretaría de Salud</p>
-								</div>
-								<div class="datetext-databar">
-									<p>25/Nov/2015</p>
-								</div>
-								<div class="formatcontainer-databar">
-									<div class="csv-format">
-										<p class="format-texts">CSV</p>
-									</div>
-									<div class="klm-format">
-										<p class="format-texts">KLM</p>
-									</div>		
-								</div>
-								<div class="greyblock-databar pull-right">
-									<img class="green-bars" src="img/green_bars.svg">
-								</div>		
-							</div>
-							<br>
-							<div class="data-bar">
-								<div class="description-databar">
-									<p>EMPRESAS PRODUCTORAS DE MINERALES METÁLICOS Y NO METÁLICOS, EMBAJADAS, INSTIT...POPULAR</p> 
-								</div>	
-								<div class="secretary-databar">
-									<p>Secretaría de Salud</p>
-								</div>
-								<div class="datetext-databar">
-									<p>25/Nov/2015</p>
-								</div>
-								<div class="formatcontainer-databar">
-									<div class="csv-format">
-										<p class="format-texts">CSV</p>
-									</div>
-									<div class="klm-format">
-										<p class="format-texts">KLM</p>
-									</div>		
-								</div>
-								<div class="greyblock-databar pull-right">
-									<img class="green-bars" src="img/green_bars.svg">
-								</div>		
-							</div>
-							<br>
-							<div class="data-bar">
-								<div class="description-databar">
-									<p>EMPRESAS PRODUCTORAS DE MINERALES METÁLICOS Y NO METÁLICOS, EMBAJADAS, INSTIT...POPULAR</p> 
-								</div>	
-								<div class="secretary-databar">
-									<p>Secretaría de Salud</p>
-								</div>
-								<div class="datetext-databar">
-									<p>25/Nov/2015</p>
-								</div>
-								<div class="formatcontainer-databar">
-									<div class="csv-format">
-										<p class="format-texts">CSV</p>
-									</div>
-									<div class="klm-format">
-										<p class="format-texts">KLM</p>
-									</div>		
-								</div>
-								<div class="greyblock-databar pull-right">
-									<img class="green-bars" src="img/green_bars.svg">
-								</div>		
-							</div>
-							<br>
-							<div class="data-bar">
-								<div class="description-databar">
-									<p>EMPRESAS PRODUCTORAS DE MINERALES METÁLICOS Y NO METÁLICOS, EMBAJADAS, INSTIT...POPULAR</p> 
-								</div>	
-								<div class="secretary-databar">
-									<p>Secretaría de Salud</p>
-								</div>
-								<div class="datetext-databar">
-									<p>25/Nov/2015</p>
-								</div>
-								<div class="formatcontainer-databar">
-									<div class="csv-format">
-										<p class="format-texts">CSV</p>
-									</div>
-									<div class="klm-format">
-										<p class="format-texts">KLM</p>
-									</div>		
-								</div>
-								<div class="greyblock-databar pull-right">
-									<img class="green-bars" src="img/green_bars.svg">
-								</div>		
-							</div>
-							<br>
-							<br>
-								
+					<div class="row">
+					<h4 class="subtitle"><strong>Datos Abiertos</strong></h4>	
+					
+					<div class=""style="width:100%">
+						<div class="" style="display: inline-block; width:30%;">
+							<img class="triangle-image" src="img/triangle.svg" style="display: inline-block;">
+							<span>Nombre</span>
+						</div>					
+							
+						<div class="" style="display: inline-block; width:20%;">
+							<img class="triangle-image" src="img/triangle.svg">
+							<span>Dependencia</span>
 						</div>
-
+						
+						<div class="" style="display: inline-block; width:15%; ">
+							<img class="triangle-image" src="img/triangle.svg">
+							<span>Fecha</span>
+						</div>
+						
+						<div class="" style="display: inline-block; width:20%;">
+							<img class="triangle-image" src="img/triangle.svg">
+							<span>Formato</span>
+						</div>
+					</div>	
+									
+					<div class="data-table-container center-block">
+						<br>		
+						<div class="data-bar">
+							<div class="description-databar">
+								<p>EMPRESAS PRODUCTORAS DE MINERALES METÁLICOS Y NO METÁLICOS, EMBAJADAS, INSTIT...POPULAR</p> 
+							</div>	
+							<div class="secretary-databar">
+								<p>Secretaría de Salud</p>
+							</div>
+							<div class="datetext-databar">
+								<p>25/Nov/2015</p>
+							</div>
+							<div class="formatcontainer-databar">
+								<div class="csv-format">
+									<p class="format-texts">CSV</p>
+								</div>
+								<div class="klm-format">
+									<p class="format-texts">KLM</p>
+								</div>		
+							</div>
+							<div class="greyblock-databar pull-right">
+								<img class="center-block green-bars" src="img/green_bars.svg">
+							</div>		
+						</div>
+						<br>							
 					</div>
+					<div class="data-table-container center-block">
+						<br>		
+						<div class="data-bar">
+							<div class="description-databar">
+								<p>EMPRESAS PRODUCTORAS DE MINERALES METÁLICOS Y NO METÁLICOS, EMBAJADAS, INSTIT...POPULAR</p> 
+							</div>	
+							<div class="secretary-databar">
+								<p>Secretaría de Salud</p>
+							</div>
+							<div class="datetext-databar">
+								<p>25/Nov/2015</p>
+							</div>
+							<div class="formatcontainer-databar">
+								<div class="csv-format">
+									<p class="format-texts">CSV</p>
+								</div>
+								<div class="klm-format">
+									<p class="format-texts">KLM</p>
+								</div>		
+							</div>
+							<div class="greyblock-databar pull-right">
+								<img class="center-block green-bars" src="img/green_bars.svg">
+							</div>		
+						</div>
+						<br>							
+					</div>
+					<div class="data-table-container center-block">
+						<br>		
+						<div class="data-bar">
+							<div class="description-databar">
+								<p>EMPRESAS PRODUCTORAS DE MINERALES METÁLICOS Y NO METÁLICOS, EMBAJADAS, INSTIT...POPULAR</p> 
+							</div>	
+							<div class="secretary-databar">
+								<p>Secretaría de Salud</p>
+							</div>
+							<div class="datetext-databar">
+								<p>25/Nov/2015</p>
+							</div>
+							<div class="formatcontainer-databar">
+								<div class="csv-format">
+									<p class="format-texts">CSV</p>
+								</div>
+								<div class="klm-format">
+									<p class="format-texts">KLM</p>
+								</div>		
+							</div>
+							<div class="greyblock-databar pull-right">
+								<img class="center-block green-bars" src="img/green_bars.svg">
+							</div>		
+						</div>
+						<br>							
+					</div>
+					<div class="data-table-container center-block">
+						<br>		
+						<div class="data-bar">
+							<div class="description-databar">
+								<p>EMPRESAS PRODUCTORAS DE MINERALES METÁLICOS Y NO METÁLICOS, EMBAJADAS, INSTIT...POPULAR</p> 
+							</div>	
+							<div class="secretary-databar">
+								<p>Secretaría de Salud</p>
+							</div>
+							<div class="datetext-databar">
+								<p>25/Nov/2015</p>
+							</div>
+							<div class="formatcontainer-databar">
+								<div class="csv-format">
+									<p class="format-texts">CSV</p>
+								</div>
+								<div class="klm-format">
+									<p class="format-texts">KLM</p>
+								</div>		
+							</div>
+							<div class="greyblock-databar pull-right">
+								<img class="center-block green-bars" src="img/green_bars.svg">
+							</div>		
+						</div>
+						<br>							
+					</div>										
+				</div>
 
 				</div>
 			</div>	
 		</div>
 	</div>	
 	<!-- /.container -->
-	<div class="black-footer">
+	<!-- <div class="black-footer">
 		<div class="lists-container center-block">
 			<div class="footer-lists">
 				<ul style="list-style-type: none; padding-left: 40px;">
@@ -268,7 +290,8 @@
 			</ul>
 			</div>
 		</div>			
-	</div>	
+	</div>	-->
+  <dgm-footer></dgm-footer>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -292,7 +315,7 @@
     		active: 2
     	});*/
 
-    	var main_url= "http://trebolbit.mx/cambio_climatico/"
+    	var main_url= "http://opintel.github.io/clima/"
 
     	$('#tab1').click(function(){
     		window.location.href=main_url;
@@ -2065,6 +2088,7 @@ var map = L.map('map', {zoomControl: true}).setView([25.511791, -101.080072], 5)
 
 
 
-	</script>  
+	</script> 
+  <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script> 
 </body>	
 </html>
