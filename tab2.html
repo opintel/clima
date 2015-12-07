@@ -341,13 +341,13 @@
     	$('#opciones').change(function() {
 
     		if($(this).val() == 1) {
-    			crearAnios1();
-    			anio = 2014;
+    			crearAnios3();
+    			anio = 2015;
 
-    			$('#anio2014').addClass("aqua-text");
+    			$('#anio2015').addClass("aqua-text");
 
-    			crearFilasIndicador1();
-    			pintarMapa();
+    			crearFilasIndicador3();
+    			pintarMapa3();
     		} else if($(this).val() == 2) {
     			crearAnios2();
     			anio = 2014;
@@ -357,13 +357,13 @@
     			crearFilasIndicador2();
     			pintarMapa2();
     		} else if($(this).val() == 3) {
-    			crearAnios3();
-    			anio = 2015;
+    			crearAnios1();
+    			anio = 2014;
 
-    			$('#anio2015').addClass("aqua-text");
+    			$('#anio2014').addClass("aqua-text");
 
-    			crearFilasIndicador3();
-    			pintarMapa3();
+    			crearFilasIndicador1();
+    			pintarMapa();
     		} else if($(this).val() == 4) {
     			crearAnios4();
 				anio = 2012;
