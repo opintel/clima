@@ -185,6 +185,7 @@ d3.json("presupuesto.json", function(data) {
       .attr("y", function(d) { return d.dy / 2; })
       .attr("dy", ".35em")
       .attr("text-anchor", "middle")
+      .attr("style", "font-size: 12; font-family: Helvetica, sans-serif")
       .text(function(d) { return d.name; })
       .style("opacity", function(d) { d.w = this.getComputedTextLength(); return d.dx > d.w ? 1 : 0; });
 
