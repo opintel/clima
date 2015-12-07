@@ -1,6 +1,6 @@
 /*-- Chart --*/
 .c3 svg {
-  font: 10px sans-serif; }
+  font: 10px "Open Sans", sans-serif; }
 
 .c3 path, .c3 line {
   fill: none;
