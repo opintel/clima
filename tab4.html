@@ -152,12 +152,12 @@
 		</div>
 	</div>
 <div class="container-clima">
-    <div class="row"> 
+     
         <div id="responsiveTabsContainer">
 
             <div id="tab-5">
 
-                <div class="">
+                <div class="row">
 
                     <p class="huge-title">Acciones</p>
 
@@ -180,44 +180,46 @@
                 </div>
 
                 <br>
-
-                <p class="subtitle">
-                    Programa especial de cambio climático.
-                </p>
-
-                <p class="black-text">Como componente central de esta Estrategia, se está implementando el Programa
-                    Especial de Cambio Climático que cuenta con 5 objetivos, 32 estrategias y 230 lineas de acción y
-                    esta siendo implementada por 32 dependencias de la Administración Pública Federal.</p>
-                <!--img style=" display: block; margin-left: auto; margin-right: auto;" src="img/grafica_lineas.png"-->
-                <div id="dendogram">
-                </div>
-                <br>
-
-                <p class="subtitle">
-                    Egresos
-                </p>
-
-                <p class="black-text">Durante el ejercicio fiscal, el Presupuesto de Egresos de la Federación contemplo
-                    más de 40 mil millones de pesos en recursos para la adaptación y mitigación de los efectos del
-                    cambio climático. Estos recursos fueron asignados a 13 Ramos dentro del PEF 2015.</p>
-
-                <p class="number-quantity"><strong>$40,663 mdp</strong></p>
-                <br>
-
-                <p class="black-text">
-	                Coloca el mouse sobre los cuadros para conocer el sector y el presupuesto asignado.
-                </p>
-
-                <!--http://opintel.github.io/clima/tree/tree.html -->
-
-                <iframe src="tree/zoomable-tree.html" frameborder="no"
-                        style="width:100%; height:620px; overflow: hidden; overflow-x: hidden; overflow-y: hidden"
-                        class="center-block"></iframe>
-
-                <!--img style="width: 100%; padding: 25px;"src="img/grafica_gris.png"-->
-
-                <!--img style="width: 80%;" class="center-block" src="img/timeline2.png"-->
-                <br>
+				<div class="row">
+	                <p class="subtitle">
+	                    Programa especial de cambio climático.
+	                </p>
+	
+	                <p class="black-text">Como componente central de esta Estrategia, se está implementando el Programa
+	                    Especial de Cambio Climático que cuenta con 5 objetivos, 32 estrategias y 230 lineas de acción y
+	                    esta siendo implementada por 32 dependencias de la Administración Pública Federal.</p>
+	                <!--img style=" display: block; margin-left: auto; margin-right: auto;" src="img/grafica_lineas.png"-->
+	                <div id="dendogram">
+	                </div>
+	                <br>
+				</div>
+				<div class="row">
+	                <p class="subtitle">
+	                    Egresos
+	                </p>
+	
+	                <p class="black-text">Durante el ejercicio fiscal, el Presupuesto de Egresos de la Federación contemplo
+	                    más de 40 mil millones de pesos en recursos para la adaptación y mitigación de los efectos del
+	                    cambio climático. Estos recursos fueron asignados a 13 Ramos dentro del PEF 2015.</p>
+	
+	                <p class="number-quantity"><strong>$40,663 mdp</strong></p>
+	                <br>
+	
+	                <p class="black-text">
+		                Coloca el mouse sobre los cuadros para conocer el sector y el presupuesto asignado.
+	                </p>
+	
+	                <!--http://opintel.github.io/clima/tree/tree.html -->
+	
+	                <iframe src="tree/zoomable-tree.html" frameborder="no"
+	                        style="width:100%; height:620px; overflow: hidden; overflow-x: hidden; overflow-y: hidden"
+	                        class="center-block"></iframe>
+	
+	                <!--img style="width: 100%; padding: 25px;"src="img/grafica_gris.png"-->
+	
+	                <!--img style="width: 80%;" class="center-block" src="img/timeline2.png"-->
+	                <br>
+				</div>
                 <!-- Data table-->
                 <div class="row">
 					<h4 class="subtitle"><strong>Datos Abiertos</strong></h4>	
@@ -277,7 +279,7 @@
             </div>
 
         </div>
-    </div>
+    
 </div>
 <!-- /.container -->
 <!-- <div class="black-footer">
@@ -337,7 +339,9 @@
 >>>>>>> dev
     </div>
 </div> -->
-<dgm-footer></dgm-footer>
+<div class="nav-git-content">
+	<dgm-footer></dgm-footer>
+</div>	
 
 
 <!-- Bootstrap core JavaScript
@@ -372,7 +376,7 @@
     ///////////////////Dendogram////////////////////////////////
 
     var margin = {top: 20, right: 120, bottom: 20, left: 40},
-            width = 750 - margin.right - margin.left,
+            width = 700 - margin.right - margin.left,
             height = 800 - margin.top - margin.bottom;
 
     var i = 0,

@@ -32,8 +32,10 @@
 </head>
 
 <body>	
-  <dgm-navbar></dgm-navbar>
-  <div class="principal-navbar">
+	<div class="nav-git-content">
+		<dgm-navbar class="center-block"></dgm-navbar>
+	</div>
+	<div class="principal-navbar">
 		<div class="nav-content center-block">
 			<div class="climatic-title">
 				<a href="index.html" class="climatic-changetext" style="color:white;">Cambio Climático</a>
@@ -55,21 +57,25 @@
 		</div>
 	</div>
 	<div class="container-clima">
-		<div class="row">	
-			<div id="responsiveTabsContainer">
-				
-				<div id="tab-3"> 
+
+		<div id="responsiveTabsContainer">
+			
+			<div id="tab-3"> 
+				<div class="row">
 					<p class="huge-title">Actividades económicas</p>
 					<p class="black-text">
 						El cambio climático que hoy enfrentamos está vinculado a la quema de combustibles fósiles, especialmente carbón, gas y petróleo, y a la deforestación, es decir, a la pérdida de superficie forestal. Ambos fenómenos tienen como consecuencia una disminución en la capacidad de absorción y un aumento excesivo en la emisión de gases de efecto invernadero (GEI) hacia la atmósfera, mismos que incrementan la temperatura del planeta
-
+	
 					</p>
+				</div>
+				<div class="row">
 					<p class="subtitle">
 						Emisiones de carbono (Mt en CO<sub>2</sub>eq. ) por actividad económica (PIB)
 					</p> </br>
 					<p class="black-text">El tamaño de la burbuja representa el costo en emisiones de cada peso de PIB generado</p>   
-          <div id="chart"></div>
-
+	      <div id="chart"></div>
+      			</div>
+      			<div class="row">
 					<p class="subtitle">
 						Actividades relacionadas a la emisión de gases de efecto invernadero.
 					</p>
@@ -82,185 +88,186 @@
 						</select>
 					</div>	
 					<br>
-					<div class="row">
-						<div class="col-xs-12">
+					<div class="">
+						<div class="">
 							<div id="map"></div>
 						</div>
 					</div>		
-
+	
 					<div class="row" style="display: flex;" id="anios-container">
 						<div class="aqua-text" style="width: 100%;" id="anio2014">
 							<p class="text-center map-year"><strong>2014</strong></p>
 						</div>																								
 					</div>
-					<br>
-					<!-- Data table-->
-					<div class="row">
-					<h4 class="subtitle"><strong>Datos Abiertos</strong></h4>	
-					
-					<div class=""style="width:100%">
-						<div class="" style="display: inline-block; width:30%;">
-							<img class="triangle-image" src="img/triangle.svg" style="display: inline-block;">
-							<span>Nombre</span>
-						</div>					
-							
-						<div class="" style="display: inline-block; width:20%;">
-							<img class="triangle-image" src="img/triangle.svg">
-							<span>Dependencia</span>
-						</div>
+      			</div>
+				<br>
+				<!-- Data table-->
+				<div class="row">
+				<h4 class="subtitle"><strong>Datos Abiertos</strong></h4>	
+				
+				<div class=""style="width:100%">
+					<div class="" style="display: inline-block; width:30%;">
+						<img class="triangle-image" src="img/triangle.svg" style="display: inline-block;">
+						<span>Nombre</span>
+					</div>					
 						
-						<div class="" style="display: inline-block; width:15%; ">
-							<img class="triangle-image" src="img/triangle.svg">
-							<span>Fecha</span>
-						</div>
-						
-						<div class="" style="display: inline-block; width:20%;">
-							<img class="triangle-image" src="img/triangle.svg">
-							<span>Formato</span>
-						</div>
-					</div>
-						
-					<div class="data-table-container center-block">
-						<br>		
-						<div class="data-bar">
-							<div class="description-databar">
-								<p class="black-text">Ventas internas de energía</p> 
-							</div>	
-							<div class="secretary-databar">
-								<p class="black-text">SENER - SIE</p>
-							</div>
-							<div class="datetext-databar">
-								<p class="black-text">26/Nov/2015</p>
-							</div>
-							<div class="formatcontainer-databar">
-								<div class="csv-format">
-									<p class="format-texts">CSV</p>
-								</div>
-								<!--<div class="klm-format">
-									<p class="format-texts">KLM</p>
-								</div>-->		
-							</div>
-							<div class="greyblock-databar pull-right">
-								<a href="http://200.23.166.35/DA/P/DGPlaneacionInformacionEnergeticas/VentasInternasEnergiaElectricaEntidadFederativa/SENER_05_VentasInternasEnergiaElectricaPorEntidadFederativa-IIIA3C06.csv"><img class="center-block green-bars" src="img/green_bars.svg" style="cursor:pointer"></a>
-							</div>		
-						</div>
-						<br>							
+					<div class="" style="display: inline-block; width:20%;">
+						<img class="triangle-image" src="img/triangle.svg">
+						<span>Dependencia</span>
 					</div>
 					
-					<div class="data-table-container center-block">
-						<br>		
-						<div class="data-bar">
-							<div class="description-databar">
-								<p class="black-text">Superficie afectada por incendios</p> 
-							</div>	
-							<div class="secretary-databar">
-								<p class="black-text">SEMARNAT</p>
-							</div>
-							<div class="datetext-databar">
-								<p class="black-text">26/Nov/2015</p>
-							</div>
-							<div class="formatcontainer-databar">
-								<div class="csv-format">
-									<p class="format-texts">CSV</p>
-								</div>
-								<!--<div class="klm-format">
-									<p class="format-texts">KLM</p>
-								</div>-->		
-							</div>
-							<div class="greyblock-databar pull-right">
-								<a href="http://dsiappsdev.semarnat.gob.mx/datos/cclimatico/incendios_forestales_superficie_afectada.csv"><img class="center-block green-bars" src="img/green_bars.svg" style="cursor:pointer"></a>
-							</div>		
-						</div>
-						<br>							
+					<div class="" style="display: inline-block; width:15%; ">
+						<img class="triangle-image" src="img/triangle.svg">
+						<span>Fecha</span>
 					</div>
 					
-					<div class="data-table-container center-block">
-						<br>		
-						<div class="data-bar">
-							<div class="description-databar">
-								<p class="black-text">Plantas de tratamiento de agua</p> 
-							</div>	
-							<div class="secretary-databar">
-								<p class="black-text">SEMARNAT</p>
-							</div>
-							<div class="datetext-databar">
-								<p class="black-text">26/Nov/2015</p>
-							</div>
-							<div class="formatcontainer-databar">
-								<div class="csv-format">
-									<p class="format-texts">CSV</p>
-								</div>
-								<!--<div class="klm-format">
-									<p class="format-texts">KLM</p>
-								</div>-->		
-							</div>
-							<div class="greyblock-databar pull-right">
-								<a href="http://dsiappsdev.semarnat.gob.mx/datos/cclimatico/plantas_de_tratamiento_de_agua_residual_industrial.csv"><img class="center-block green-bars" src="img/green_bars.svg" style="cursor:pointer"></a>
-							</div>		
-						</div>
-						<br>							
+					<div class="" style="display: inline-block; width:20%;">
+						<img class="triangle-image" src="img/triangle.svg">
+						<span>Formato</span>
 					</div>
-					
-					<div class="data-table-container center-block">
-						<br>		
-						<div class="data-bar">
-							<div class="description-databar">
-								<p class="black-text">Generación de Residuos Solidos</p> 
-							</div>	
-							<div class="secretary-databar">
-								<p class="black-text">SEMARNAT</p>
-							</div>
-							<div class="datetext-databar">
-								<p class="black-text">26/Nov/2015</p>
-							</div>
-							<div class="formatcontainer-databar">
-								<div class="csv-format">
-									<p class="format-texts">CSV</p>
-								</div>
-								<!--<div class="klm-format">
-									<p class="format-texts">KLM</p>
-								</div>-->		
-							</div>
-							<div class="greyblock-databar pull-right">
-								<a href="http://dsiappsdev.semarnat.gob.mx/datos/cclimatico/residuos_solidos_por_estado.csv"><img class="center-block green-bars" src="img/green_bars.svg" style="cursor:pointer"></a>
-							</div>		
-						</div>
-						<br>							
-					</div>
-					
-					<div class="data-table-container center-block">
-						<br>		
-						<div class="data-bar">
-							<div class="description-databar">
-								<p class="black-text">Recursos administrativos, vehiculos de motor registrados</p> 
-							</div>	
-							<div class="secretary-databar">
-								<p class="black-text">INEGI</p>
-							</div>
-							<div class="datetext-databar">
-								<p class="black-text">26/Nov/2015</p>
-							</div>
-							<div class="formatcontainer-databar">
-								<div class="csv-format">
-									<p class="format-texts">CSV</p>
-								</div>
-								<!--<div class="klm-format">
-									<p class="format-texts">KLM</p>
-								</div>-->		
-							</div>
-							<div class="greyblock-databar pull-right">
-								<a href="http://www.inegi.org.mx/est/lista_cubos/consulta.aspx?p=adm&c=8"><img class="center-block green-bars" src="img/green_bars.svg" style="cursor:pointer"></a>
-							</div>		
-						</div>
-						<br>							
-					</div>				
-					
-															
 				</div>
+					
+				<div class="data-table-container center-block">
+					<br>		
+					<div class="data-bar">
+						<div class="description-databar">
+							<p class="black-text">Ventas internas de energía</p> 
+						</div>	
+						<div class="secretary-databar">
+							<p class="black-text">SENER - SIE</p>
+						</div>
+						<div class="datetext-databar">
+							<p class="black-text">26/Nov/2015</p>
+						</div>
+						<div class="formatcontainer-databar">
+							<div class="csv-format">
+								<p class="format-texts">CSV</p>
+							</div>
+							<!--<div class="klm-format">
+								<p class="format-texts">KLM</p>
+							</div>-->		
+						</div>
+						<div class="greyblock-databar pull-right">
+							<a href="http://200.23.166.35/DA/P/DGPlaneacionInformacionEnergeticas/VentasInternasEnergiaElectricaEntidadFederativa/SENER_05_VentasInternasEnergiaElectricaPorEntidadFederativa-IIIA3C06.csv"><img class="center-block green-bars" src="img/green_bars.svg" style="cursor:pointer"></a>
+						</div>		
+					</div>
+					<br>							
+				</div>
+				
+				<div class="data-table-container center-block">
+					<br>		
+					<div class="data-bar">
+						<div class="description-databar">
+							<p class="black-text">Superficie afectada por incendios</p> 
+						</div>	
+						<div class="secretary-databar">
+							<p class="black-text">SEMARNAT</p>
+						</div>
+						<div class="datetext-databar">
+							<p class="black-text">26/Nov/2015</p>
+						</div>
+						<div class="formatcontainer-databar">
+							<div class="csv-format">
+								<p class="format-texts">CSV</p>
+							</div>
+							<!--<div class="klm-format">
+								<p class="format-texts">KLM</p>
+							</div>-->		
+						</div>
+						<div class="greyblock-databar pull-right">
+							<a href="http://dsiappsdev.semarnat.gob.mx/datos/cclimatico/incendios_forestales_superficie_afectada.csv"><img class="center-block green-bars" src="img/green_bars.svg" style="cursor:pointer"></a>
+						</div>		
+					</div>
+					<br>							
+				</div>
+				
+				<div class="data-table-container center-block">
+					<br>		
+					<div class="data-bar">
+						<div class="description-databar">
+							<p class="black-text">Plantas de tratamiento de agua</p> 
+						</div>	
+						<div class="secretary-databar">
+							<p class="black-text">SEMARNAT</p>
+						</div>
+						<div class="datetext-databar">
+							<p class="black-text">26/Nov/2015</p>
+						</div>
+						<div class="formatcontainer-databar">
+							<div class="csv-format">
+								<p class="format-texts">CSV</p>
+							</div>
+							<!--<div class="klm-format">
+								<p class="format-texts">KLM</p>
+							</div>-->		
+						</div>
+						<div class="greyblock-databar pull-right">
+							<a href="http://dsiappsdev.semarnat.gob.mx/datos/cclimatico/plantas_de_tratamiento_de_agua_residual_industrial.csv"><img class="center-block green-bars" src="img/green_bars.svg" style="cursor:pointer"></a>
+						</div>		
+					</div>
+					<br>							
+				</div>
+				
+				<div class="data-table-container center-block">
+					<br>		
+					<div class="data-bar">
+						<div class="description-databar">
+							<p class="black-text">Generación de Residuos Solidos</p> 
+						</div>	
+						<div class="secretary-databar">
+							<p class="black-text">SEMARNAT</p>
+						</div>
+						<div class="datetext-databar">
+							<p class="black-text">26/Nov/2015</p>
+						</div>
+						<div class="formatcontainer-databar">
+							<div class="csv-format">
+								<p class="format-texts">CSV</p>
+							</div>
+							<!--<div class="klm-format">
+								<p class="format-texts">KLM</p>
+							</div>-->		
+						</div>
+						<div class="greyblock-databar pull-right">
+							<a href="http://dsiappsdev.semarnat.gob.mx/datos/cclimatico/residuos_solidos_por_estado.csv"><img class="center-block green-bars" src="img/green_bars.svg" style="cursor:pointer"></a>
+						</div>		
+					</div>
+					<br>							
+				</div>
+				
+				<div class="data-table-container center-block">
+					<br>		
+					<div class="data-bar">
+						<div class="description-databar">
+							<p class="black-text">Recursos administrativos, vehiculos de motor registrados</p> 
+						</div>	
+						<div class="secretary-databar">
+							<p class="black-text">INEGI</p>
+						</div>
+						<div class="datetext-databar">
+							<p class="black-text">26/Nov/2015</p>
+						</div>
+						<div class="formatcontainer-databar">
+							<div class="csv-format">
+								<p class="format-texts">CSV</p>
+							</div>
+							<!--<div class="klm-format">
+								<p class="format-texts">KLM</p>
+							</div>-->		
+						</div>
+						<div class="greyblock-databar pull-right">
+							<a href="http://www.inegi.org.mx/est/lista_cubos/consulta.aspx?p=adm&c=8"><img class="center-block green-bars" src="img/green_bars.svg" style="cursor:pointer"></a>
+						</div>		
+					</div>
+					<br>							
+				</div>				
+				
+														
+			</div>
 
-				</div>
-			</div>	
-		</div>
+			</div>
+		</div>	
+
 	</div>	
 	<!-- /.container -->
 	<!-- <div class="black-footer">
@@ -319,7 +326,9 @@
 			</div>
 		</div>			
 	</div>	-->
-  <dgm-footer></dgm-footer>
+    <div class="nav-git-content">
+		<dgm-footer></dgm-footer>
+	</div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
