@@ -355,7 +355,6 @@
     	var filas = "";
     	var ind; 
 
-
     	$('#opciones').change(function() {
 
     		if($(this).val() == 1) {
@@ -1021,9 +1020,9 @@ function pintarMapa() {
 
 	info.update = function (props) {
 		this._div.innerHTML = (props ? '<h4>' + props.name + '</h4> <br>' 
-			+ '<div style="text-align: left; font-size: 12px; font-weight: bold;">Población: ' + props.pob_2014 + '<br>' 
-			+ 'PIB Anual: ' + props.valoragregado_2014 + '<br>'
-			+ 'Territorio: ' + props.superficie_total + '</div><br>'
+			+ '<div style="text-align: left; font-size: 12px; font-weight: bold;">Población: ' + d3.format(',')(props.pob_2014) + '<br>' 
+			+ 'PIB Anual: ' + d3.format(',')(props.valoragregado_2014) + '<br>'
+			+ 'Territorio: ' + d3.format(',')(    d3.round((props.superficie_total/100000),1)    ) + ' Km<sup>2</sup></div><br>'
 			+ '<b>Top estados generadores</b><br>'
 			+ filas
 			+ '<div id="chart2"></div>' : '');
@@ -1136,9 +1135,9 @@ function pintarMapa2() {
 
 	info.update = function (props) {
 		this._div.innerHTML = (props ? '<h4>' + props.name + '</h4> <br>' 
-			+ '<div style="text-align: left; font-size: 12px; font-weight: bold;">Población: ' + props.pob_2014 + '<br>' 
-			+ 'PIB Anual: ' + props.valoragregado_2014 + '<br>'
-			+ 'Territorio: ' + props.superficie_total + '</div><br>'
+			+ '<div style="text-align: left; font-size: 12px; font-weight: bold;">Población: ' + d3.format(',')(props.pob_2014) + '<br>' 
+			+ 'PIB Anual: ' + d3.format(',')(props.valoragregado_2014) + '<br>'
+			+ 'Territorio: ' + d3.format(',')( d3.round((props.superficie_total/100000),1)) + ' Km<sup>2</sup></div><br>'
 			+ '<b>Top estados generadores</b><br>'
 			+ filas
 			+ '<div id="chart2"></div>' : '');
@@ -1248,9 +1247,9 @@ function pintarMapa3() {
 
 	info.update = function (props) {
 		this._div.innerHTML = (props ? '<h4>' + props.name + '</h4> <br>' 
-			+ '<div style="text-align: left; font-size: 12px; font-weight: bold;">Población: ' + props.pob_2014 + '<br>' 
-			+ 'PIB Anual: ' + props.valoragregado_2014 + '<br>'
-			+ 'Territorio: ' + props.superficie_total + '</div><br>'
+			+ '<div style="text-align: left; font-size: 12px; font-weight: bold;">Población: ' + d3.format(',')(props.pob_2014) + '<br>' 
+			+ 'PIB Anual: ' + d3.format(',')(props.valoragregado_2014) + '<br>'
+			+ 'Territorio: ' + d3.format(',')( d3.round((props.superficie_total/100000),1)) + '  Km<sup>2</sup></div><br>'
 			+ '<b>Top estados generadores</b><br>'
 			+ filas
 			+ '<div id="chart2"></div>' : '');
@@ -1360,9 +1359,9 @@ function pintarMapa4() {
 
 	info.update = function (props) {
 		this._div.innerHTML = (props ? '<h4>' + props.name + '</h4> <br>' 
-			+ '<div style="text-align: left; font-size: 12px; font-weight: bold;">Población: ' + props.pob_2014 + '<br>' 
-			+ 'PIB Anual: ' + props.valoragregado_2014 + '<br>'
-			+ 'Territorio: ' + props.superficie_total + '</div><br>'
+			+ '<div style="text-align: left; font-size: 12px; font-weight: bold;">Población: ' + d3.format(',')(props.pob_2014) + '<br>' 
+			+ 'PIB Anual: ' + d3.format(',')(props.valoragregado_2014) + '<br>'
+			+ 'Territorio: ' + d3.format(',')( d3.round((props.superficie_total/100000),1)) + '  Km<sup>2</sup></div><br>'
 			+ '<b>Top estados generadores</b><br>'
 			+ filas
 			+ '<div id="chart2"></div>' : '');
@@ -1471,9 +1470,9 @@ function pintarMapa5() {
 
 	info.update = function (props) {
 		this._div.innerHTML = (props ? '<h4>' + props.name + '</h4> <br>' 
-			+ '<div style="text-align: left; font-size: 12px; font-weight: bold;">Población: ' + props.pob_2014 + '<br>' 
-			+ 'PIB Anual: ' + props.valoragregado_2014 + '<br>'
-			+ 'Territorio: ' + props.superficie_total + '</div><br>'
+			+ '<div style="text-align: left; font-size: 12px; font-weight: bold;">Población: ' + d3.format(',')(props.pob_2014) + '<br>' 
+			+ 'PIB Anual: ' + d3.format(',')(props.valoragregado_2014) + '<br>'
+			+ 'Territorio: ' + d3.format(',')( d3.round((props.superficie_total/100000),1)) + '  Km<sup>2</sup></div><br>'
 			+ '<b>Top estados generadores</b><br>'
 			+ filas
 			+ '<div id="chart2"></div>' : '');
@@ -1582,9 +1581,9 @@ function pintarMapa6() {
 
 	info.update = function (props) {
 		this._div.innerHTML = (props ? '<h4>' + props.name + '</h4> <br>' 
-			+ '<div style="text-align: left; font-size: 12px; font-weight: bold;">Población: ' + props.pob_2014 + '<br>' 
-			+ 'PIB Anual: ' + props.valoragregado_2014 + '<br>'
-			+ 'Territorio: ' + props.superficie_total + '</div><br>'
+			+ '<div style="text-align: left; font-size: 12px; font-weight: bold;">Población: ' + d3.format(',')(props.pob_2014) + '<br>' 
+			+ 'PIB Anual: ' + d3.format(',')(props.valoragregado_2014) + '<br>'
+			+ 'Territorio: ' + d3.format(',')( d3.round((props.superficie_total/100000),1)) + '  Km<sup>2</sup></div><br>'
 			+ '<b>Top estados generadores</b><br>'
 			+ filas
 			+ '<div id="chart2"></div>' : '');
@@ -1693,9 +1692,9 @@ function pintarMapa7() {
 
 	info.update = function (props) {
 		this._div.innerHTML = (props ? '<h4>' + props.name + '</h4> <br>' 
-			+ '<div style="text-align: left; font-size: 12px; font-weight: bold;">Población: ' + props.pob_2014 + '<br>' 
-			+ 'PIB Anual: ' + props.valoragregado_2014 + '<br>'
-			+ 'Territorio: ' + props.superficie_total + '</div><br>'
+			+ '<div style="text-align: left; font-size: 12px; font-weight: bold;">Población: ' + d3.format(',')(props.pob_2014) + '<br>' 
+			+ 'PIB Anual: ' + d3.format(',')(props.valoragregado_2014) + '<br>'
+			+ 'Territorio: ' + d3.format(',')( d3.round((props.superficie_total/100000),1)) + '  Km<sup>2</sup></div><br>'
 			+ '<b>Top estados generadores</b><br>'
 			+ filas
 			+ '<div id="chart2"></div>' : '');
@@ -1804,9 +1803,9 @@ function pintarMapa8() {
 
 	info.update = function (props) {
 		this._div.innerHTML = (props ? '<h4>' + props.name + '</h4> <br>' 
-			+ '<div style="text-align: left; font-size: 12px; font-weight: bold;">Población: ' + props.pob_2014 + '<br>' 
-			+ 'PIB Anual: ' + props.valoragregado_2014 + '<br>'
-			+ 'Territorio: ' + props.superficie_total + '</div><br>'
+			+ '<div style="text-align: left; font-size: 12px; font-weight: bold;">Población: ' + d3.format(',')(props.pob_2014) + '<br>' 
+			+ 'PIB Anual: ' + d3.format(',')(props.valoragregado_2014) + '<br>'
+			+ 'Territorio: ' + d3.format(',')( d3.round((props.superficie_total/100000),1)) + '  Km<sup>2</sup></div><br>'
 			+ '<b>Top estados generadores</b><br>'
 			+ filas
 			+ '<div id="chart2"></div>' : '');
@@ -1915,9 +1914,9 @@ function pintarMapa9() {
 
 	info.update = function (props) {
 		this._div.innerHTML = (props ? '<h4>' + props.name + '</h4> <br>' 
-			+ '<div style="text-align: left; font-size: 12px; font-weight: bold;">Población: ' + props.pob_2014 + '<br>' 
-			+ 'PIB Anual: ' + props.valoragregado_2014 + '<br>'
-			+ 'Territorio: ' + props.superficie_total + '</div><br>'
+			+ '<div style="text-align: left; font-size: 12px; font-weight: bold;">Población: ' + d3.format(',')(props.pob_2014) + '<br>' 
+			+ 'PIB Anual: ' + d3.format(',')(props.valoragregado_2014) + '<br>'
+			+ 'Territorio: ' + d3.format(',')( d3.round((props.superficie_total/100000),1)) + '  Km<sup>2</sup></div><br>'
 			+ '<b>Top estados generadores</b><br>'
 			+ filas
 			+ '<div id="chart2"></div>' : '');
@@ -2025,9 +2024,9 @@ function pintarMapa10() {
 
 	info.update = function (props) {
 		this._div.innerHTML = (props ? '<h4>' + props.name + '</h4> <br>' 
-			+ '<div style="text-align: left; font-size: 12px; font-weight: bold;">Población: ' + props.pob_2014 + '<br>' 
-			+ 'PIB Anual: ' + props.valoragregado_2014 + '<br>'
-			+ 'Territorio: ' + props.superficie_total + '</div><br>'
+			+ '<div style="text-align: left; font-size: 12px; font-weight: bold;">Población: ' + d3.format(',')(props.pob_2014) + '<br>' 
+			+ 'PIB Anual: ' + d3.format(',')(props.valoragregado_2014) + '<br>'
+			+ 'Territorio: ' + d3.format(',')( d3.round((props.superficie_total/100000),1)) + '  Km<sup>2</sup></div><br>'
 			+ '<b>Top estados generadores</b><br>'
 			+ filas
 			+ '<div id="chart2"></div>' : '');
@@ -2135,9 +2134,9 @@ function pintarMapa11() {
 
 	info.update = function (props) {
 		this._div.innerHTML = (props ? '<h4>' + props.name + '</h4> <br>' 
-			+ '<div style="text-align: left; font-size: 12px; font-weight: bold;">Población: ' + props.pob_2014 + '<br>' 
-			+ 'PIB Anual: ' + props.valoragregado_2014 + '<br>'
-			+ 'Territorio: ' + props.superficie_total + '</div><br>'
+			+ '<div style="text-align: left; font-size: 12px; font-weight: bold;">Población: ' + d3.format(',')(props.pob_2014) + '<br>' 
+			+ 'PIB Anual: ' + d3.format(',')(props.valoragregado_2014) + '<br>'
+			+ 'Territorio: ' + d3.format(',')( d3.round((props.superficie_total/100000),1)) + '  Km<sup>2</sup></div><br>'
 			+ '<b>Top estados generadores</b><br>'
 			+ filas
 			+ '<div id="chart2"></div>' : '');
@@ -2274,9 +2273,9 @@ var map = L.map('map', {zoomControl: true}).setView([25.511791, -101.080072], 5)
 		info.update = function (props) {
 			crearFilasIndicador1();
 			this._div.innerHTML = (props ? '<h4>' + props.name + '</h4> <br>' 
-				+ '<div style="text-align: left; font-size: 12px; font-weight: bold;">Población: ' + props.pob_2014 + '<br>' 
-				+ 'PIB Anual: ' + props.valoragregado_2014 + '<br>'
-				+ 'Territorio: ' + props.superficie_total + '</div><br>'
+				+ '<div style="text-align: left; font-size: 12px; font-weight: bold;">Población: ' + d3.format(',')(props.pob_2014) + '<br>' 
+				+ 'PIB Anual: ' + d3.format(',')(props.valoragregado_2014) + '<br>'
+				+ 'Territorio: ' + d3.format(',')( d3.round((props.superficie_total/100000),1)) + '  Km<sup>2</sup></div><br>'
 				+ '<b>Top estados generadores</b><br>'
 				+ filas
 				+ '<div id="chart2"></div>' : '');

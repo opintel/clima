@@ -63,9 +63,16 @@ body {
           box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
 }
 
-.subtitle-landing{
-	font-size: 20px;
+.subtitle-landing:hover{
+	color: #00CC99;
 }
+
+.subtitle-landing{
+	font-size: 20px;	
+	color: grey;
+}
+
+
 .landing-box{
 	width: 80%; 
 	background-color: #01CC99; 
@@ -317,12 +324,12 @@ body {
 	border-radius: 0;
     float: left;
     height: 30px;
-    width: 400px;
+    width: 460px;
     border: none;
     background-color: white;
     color: black;
     margin-left: 10px;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .select-container{

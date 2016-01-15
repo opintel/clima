@@ -231,7 +231,9 @@
 				<div class="">
 					<div class="row">
 						<div style="width: 700px;">
-							<div id="chart1"></div>						
+							<div id="chart1"></div>
+							<p><i>*CO<sub>2</sub> capturado por permanencias en tierras forestales, asentamientos humanos, agrícolas y otras tierras.</i></p>
+							<p><i>** Emisiones totales menos las absorciones</i></p>
 						</div>	
 					</div>	
 				</div>
@@ -245,16 +247,19 @@
 						Escenarios de emisiones de gases de efecto invernadero 2013-2030
 					</p>			
 
-					<p class="black-text" style="padding-top: 30px; padding-bottom: 30px;">
-						Megatoneladas de CO<sub>2</sub> equivalente
-					</p>			
 					<div class="col-xs-7">
+						<p class="black-text" style="padding-top: 30px; padding-bottom: 30px;">
+							Megatoneladas de CO<sub>2</sub> equivalente
+						</p>			
 						<div id="chart"></div>
 					</div>
 					<div class="col-xs-5">
+						<p class="black-text" style="padding-top: 30px; padding-bottom: 30px;">
+							Porcentajes de reducción en cada sector económico para alcanzar el escenario de mitigación INDC 2030
+						</p>			
 						<table class="percents_table">
 							<tr class="info_percents">
-								<td><span class="high-textpercent">Sector MITIGACIÓN 2030 (MtCO2e)</span></td>
+								<td><span class="high-textpercent">Sector MITIGACIÓN 2030 (MtCO<sub>2</sub>e)</span></td>
 							</tr>
 							<tr class="info_percents">
 								<td><span class="high-textpercent">Petróleo y gas</span><span class="light-textpercent"> 19.2%</span></td>
@@ -410,7 +415,7 @@
 		            ['Generación Energía Eléctrica', 126.607,0,0],
 		            ['Fuentes Móviles', 174.156,0,0],
 		            ['Agropecuario y Uso de Suelos', 112.59,0,0], 
-		            ['Permanencias y Cambio de Uso de Suelos', 0,-172.997,0],
+		            ['Permanencias y Cambio de Uso de Suelos**', 0,-172.997,0],
 		            ['Emisiones Netas', 0,0,492.307],
 		        ],
 		        type: 'bar',
@@ -425,7 +430,7 @@
 		        x: {
 		            type: 'category',
 		            show: true,
-		            categories: ['Emisiones Totales', 'Absorciones', 'Emisiones Netas']
+		            categories: ['Emisiones Totales', 'Absorciones*', 'Emisiones Netas**']
 		        },
 		        y: {
 		           label: 'Mt de CO2',
