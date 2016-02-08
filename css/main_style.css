@@ -324,12 +324,12 @@ body {
 	border-radius: 0;
     float: left;
     height: 30px;
-    width: 460px;
+    width: 490px;
     border: none;
     background-color: white;
     color: black;
     margin-left: 10px;
-    font-size: 14px;
+    font-size: 11px;
 }
 
 .select-container{
