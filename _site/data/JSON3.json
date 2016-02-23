@@ -1,0 +1,496 @@
+{  
+   "item1":{  
+      "highlight":"0.85°C",
+      "description":"Incremento de temperatura nacional",
+      "imageUrl":"http://opintel.github.io/clima/img/item1_on.svg",
+      "tooltipDescription":"Desde la década de los años sesenta, México se ha vuelto más cálido. Las temperaturas promedio a nivel nacional han aumentado 0.85°C",
+      "properties":{  
+        "industria":{  
+            "title":"Industria, Petróleo y Gas",
+            "sector_values":[  
+               {  
+                  "name":"Petróleo y Gas",
+                  "value":"12.1%"
+               },
+               {  
+                  "name":"Industria",
+                  "value":"17.3%"
+               }
+            ],
+            "carbono_emissions":"29.4% (195 millones de toneladas CO<sub>2</sub> eq.)"
+         },
+        "fuentes":{  
+            "title":"Fuentes móviles",
+            "sector_values":[  
+               {  
+                  "name":"Autotransporte",
+                  "value":"87.8%"
+               },
+               {  
+                  "name":"No Carretero",
+                  "value":"5.6%"
+               },
+               {  
+                  "name":"Aviación",
+                  "value":"4.1%"
+               },
+               {  
+                  "name":"Marítimo",
+                  "value":"1.2%"
+               },
+               {  
+                  "name":"Ferrocarril",
+                  "value":"1.2%"
+               }
+            ],
+            "carbono_emissions":"26.2% (174 millones de toneladas CO<sub>2</sub> eq.)"
+         },
+        "generacion":{  
+            "title":"Generación Eléctrica",
+            "sector_values":[  
+               {  
+                  "name":"Ciclo Combinado",
+                  "value":"40.30%"
+               },
+               {  
+                  "name":"Termoeléctrica",
+                  "value":"29.80%"
+               },
+               {  
+                  "name":"Dual",
+                  "value":"13.90%"
+               },
+               {  
+                  "name":"Carboeléctrica",
+                  "value":"13.70%"
+               },
+               {  
+                  "name":"Turbogas",
+                  "value":"1.60%"
+               },
+               {  
+                  "name":"Combustión Interna",
+                  "value":"0.70%"
+               }
+            ],
+            "carbono_emissions":"19% (127 millones de toneladas CO<sub>2</sub> eq.)"
+         },
+        "agropecuario":{  
+            "title":"Agropecuario, uso de suelo y silvicultura",
+            "sector_values":[  
+               {  
+                  "name":"Agropecuario",
+                  "value":"12%"
+               },
+               {  
+                  "name":"Uso de suelo y silvicultura",
+                  "value":"5.6%"
+               }
+            ],
+            "carbono_emissions":"16.9% (112 millones de toneladas CO<sub>2</sub> eq.)"
+         },
+        "residuos":{  
+            "title":"Residuos, residencial y comercial",
+            "sector_values":[  
+               {  
+                  "name":"Residuos",
+                  "value":"4.6%"
+               },
+               {  
+                  "name":"Residencial y comercial",
+                  "value":"3.9%"
+               }
+            ],
+            "carbono_emissions":"8.5% (57 millones de toneladas CO<sub>2</sub> eq.)"
+         },
+        "carbono":{  
+            "title":"Carbono negro",
+            "sector_values":[  
+               {  
+                  "name":"Fuentes móviles",
+                  "value":"37.8%"
+               },
+               {  
+                  "name":"Industria, petróleo y gas",
+                  "value":"30%"
+               },
+               {  
+                  "name":"Residuos, residencial y comercial",
+                  "value":"15.4%"
+               },
+               {  
+                  "name":"Agropecuario, Uso de Suelo y Silvicultura",
+                  "value":"10%"
+               },
+               {  
+                  "name":"Generación eléctrica",
+                  "value":"6.8%"
+               }
+            ],
+            "carbono_emissions":"125 miles de toneladas de CO<sub>2</sub> eq."
+         }                                             
+        } 
+   },
+   "item2":{  
+      "highlight":"México",
+      "description":" produce 665,304 Total en CO<sub>2</sub> eq al año",
+      "imageUrl":"http://opintel.github.io/clima/img/item2_on.svg",
+      "tooltipDescription":"México contribuye con sólo el 1.37% (12º país en emisiones) de las emisones globales de CO2 derivadas de la quema de combustibles fósiles",
+      "properties":{  
+        "industria":{  
+            "title":"Industria, Petróleo y Gas",
+            "sector_values":[  
+               {  
+                  "name":"Petróleo y Gas",
+                  "value":"12.1%"
+               },
+               {  
+                  "name":"Industria",
+                  "value":"17.3%"
+               }
+            ],
+            "carbono_emissions":"29.4% (195 millones de toneladas CO<2</sub> eq.)"
+         },
+        "fuentes":{  
+            "title":"Fuentes móviles",
+            "sector_values":[  
+               {  
+                  "name":"Autotransporte",
+                  "value":"87.8%"
+               },
+               {  
+                  "name":"No Carretero",
+                  "value":"5.6%"
+               },
+               {  
+                  "name":"Aviación",
+                  "value":"4.1%"
+               },
+               {  
+                  "name":"Marítimo",
+                  "value":"1.2%"
+               },
+               {  
+                  "name":"Ferrocarril",
+                  "value":"1.2%"
+               }
+            ],
+            "carbono_emissions":"26.2% (174 millones de toneladas CO<sub>2</sub> eq.)"
+         },
+        "generacion":{  
+            "title":"Generación Eléctrica",
+            "sector_values":[  
+               {  
+                  "name":"Ciclo Combinado",
+                  "value":"40.30%"
+               },
+               {  
+                  "name":"Termoeléctrica",
+                  "value":"29.80%"
+               },
+               {  
+                  "name":"Dual",
+                  "value":"13.90%"
+               },
+               {  
+                  "name":"Carboeléctrica",
+                  "value":"13.70%"
+               },
+               {  
+                  "name":"Turbogas",
+                  "value":"1.60%"
+               },
+               {  
+                  "name":"Combustión Interna",
+                  "value":"0.70%"
+               }
+            ],
+            "carbono_emissions":"19% (127 millones de toneladas CO<sub>2</sub> eq.)"
+         },
+        "agropecuario":{  
+            "title":"Agropecuario, Uso de suelo y Silvicultura",
+            "sector_values":[  
+               {  
+                  "name":"Agropecuario",
+                  "value":"12%"
+               },
+               {  
+                  "name":"Uso de suelo y Silvicultura",
+                  "value":"5.6%"
+               }
+            ],
+            "carbono_emissions":"16.9% (112 millones de toneladas CO<sub>2</sub> eq.)"
+         },
+        "residuos":{  
+            "title":"Residuos, residencial y comercial",
+            "sector_values":[  
+               {  
+                  "name":"Residuos",
+                  "value":"4.6%"
+               },
+               {  
+                  "name":"Residencial y comercial",
+                  "value":"3.9%"
+               }
+            ],
+            "carbono_emissions":"8.5% (57 millones de toneladas CO<sub>2</sub> eq.)"
+         },
+        "carbono":{  
+            "title":"Carbono negro",
+            "sector_values":[  
+               {  
+                  "name":"Fuentes móviles",
+                  "value":"37.8%"
+               },
+               {  
+                  "name":"Industria, petróleo y gas",
+                  "value":"30%"
+               },
+               {  
+                  "name":"Residuos, residencial y comercial",
+                  "value":"15.4%"
+               },
+               {  
+                  "name":"Agropecuario, Uso de Suelo y Silvicultura",
+                  "value":"10%"
+               },
+               {  
+                  "name":"Generación eléctrica",
+                  "value":"6.8%"
+               }
+            ],
+            "carbono_emissions":"125 miles de toneladas de CO<sub>2</sub> eq."
+         }                                             
+        } 
+   },
+   "item3":{  
+      "highlight":"22%",
+      "description":"En reducción de emisiones de gases efecto invernadero",
+      "imageUrl":"http://opintel.github.io/clima/img/item3_on.svg",
+      "tooltipDescription":"Para el 2030, México reducirá sus emisiones de GEI en un 22% y 51% de carbono negro con relación al 2013",
+      "properties":{  
+        "industria":{  
+            "title":"Industria, Petróleo y Gas",
+            "sector_values":[  
+               {  
+                  "name":"Producción de energía limpia, mejora de eficiencia en tecnologías de generación, reducción de pérdidas técnicas en el Sistema Eléctrico Nacional, sustitución por combustibles más limpios y alternos, cogeneración, mejores prácticas en la industria y el cierre de la planta de producción de HCFC_22, aportarán el 43% de las emisiones de GEI mitigadas en el 2030. Esta aportación de mitigación podrá incrementarse con la aportación de distintos sectores privados y de las acciones implementadas en los estados y municipios.",
+                  "value":""
+               }
+            ],
+            "carbono_emissions":""
+         },
+        "fuentes":{  
+            "title":"Agropecuario, Uso de Suelo y Silvicultura",
+            "sector_values":[  
+               {  
+                  "name":"El uso de biodigestores, agricultura sustentable, así como la recuperación de la vocación forestal en áreas naturales protegidas, cero deforestaciones netas y plantaciones comerciales aportarán el 25% de las emisiones GEI mitigadas. Esta aportación de mitigación podrá incrementarse con la aportación de distintos sectores privados y de las acciones implementadas en los estados y municipios.",
+                  "value":""
+               }
+            ],
+            "carbono_emissions":""
+         },
+        "generacion":{  
+            "title":"Transporte",
+            "sector_values":[  
+               {  
+                  "name":"Transportarnos en vehículos con tecnología baja en emisiones, impulso de transporte público y multimodal, mejora en la calidad de los combustibles, así como estándares de eficiencia energética en autos y camiones nuevos aportarán con el 23% de las emisiones GEI mitigadas. Esta aportación de mitigación podrá incrementarse con la aportación de distintos sectores privados y de las acciones implementadas en los estados y municipios.",
+                  "value":""
+               }
+            ],
+            "carbono_emissions":""
+         },
+        "agropecuario":{  
+            "title":"Residuos, residencial y comercial",
+            "sector_values":[  
+               {  
+                  "name":"El manejo sustentable de los residuos, impulso de tecnologías bajas en consumo de energía y agua, así como usar energía amigable con el ambiente en hogares y comercios aportarán con el 9% de las emisiones de GEI mitigadas. Esta aportación de mitigación podrá incrementarse con la aportación de distintos sectores privados y de las acciones implementadas en los estados y municipios.",
+                  "value":""
+               }
+            ],
+            "carbono_emissions":"16.9% (112 millones de toneladas CO<sub>2</sub> eq.)"
+         },
+        "residuos":{  
+            "title":"Carbono negro",
+            "sector_values":[  
+               {  
+                  "name":"El 83% de la mitigación de las emisiones de carbono negro se identifican, por una parte, en la contribución del sector transporte por la sustitución con combustibles de ultra bajo contenido de azufre, así como el cambio modal en el transporte de carga doméstica con el uso de ferrocarriles; y por otra parte el control de partículas negras de hollín en las calderas bagaceras de los ingenios azucareros y la industria siderúrgica. Junto con la quema de leña, que además genera problemas respiratorios. Esto representa un aporte del 11.4% al compromiso de reducción de emisiones de carbono negro.",
+                  "value":""
+               }
+            ],
+            "carbono_emissions":""
+         }                                           
+        } 
+   },
+   "item4":{  
+      "highlight":"319",
+      "description":"Municipios más vulnerables al Cambio Climático",
+      "imageUrl":"http://trebolbit.mx/cambio_climatico/img/green_towers.png",
+      "tooltipDescription":"Estos 319 municipios son los registrados como los más vulnerables a efectos del Cambio Climático",
+      "properties":{  
+        "industria":{  
+            "title":"Municipios más vulnerables del Noroeste",
+            "sector_values":[  
+               {  
+                  "name":"Baja California",
+                  "value":"3"
+               },
+               {  
+                  "name":"Baja California Sur",
+                  "value":"3"
+               },
+               {  
+                  "name":"Nayarit",
+                  "value":"10"
+               },
+               {  
+                  "name":"Sinaloa",
+                  "value":"11"
+               },
+               {  
+                  "name":"Sonora",
+                  "value":"7"
+               }
+            ],
+            "carbono_emissions":"34 municipios"
+         },
+        "fuentes":{  
+            "title":"Municipios más vulnerables del Norte",
+            "sector_values":[  
+               {  
+                  "name":"Chihuahua",
+                  "value":"15"
+               },
+               {  
+                  "name":"Coahuila",
+                  "value":"9"
+               },
+               {  
+                  "name":"Durango",
+                  "value":"5"
+               },
+               {  
+                  "name":"San Luis Potosí",
+                  "value":"9"
+               },
+               {  
+                  "name":"Zacatecas",
+                  "value":"10"
+               }
+            ],
+            "carbono_emissions":"48 municipios"
+         },
+        "generacion":{  
+            "title":"Municipios más vulnerables del Noreste",
+            "sector_values":[  
+               {  
+                  "name":"Nuevo León",
+                  "value":"3"
+               },
+                {  
+                  "name":"Tamaulipas",
+                  "value":"7"
+               }
+            ],
+            "carbono_emissions":"10 municipios"
+         },
+        "agropecuario":{  
+            "title":"Municipios más vulnerables del Centro Occidente",
+            "sector_values":[  
+               {  
+                  "name":"Aguascalientes",
+                  "value":"2"
+               },
+               {  
+                  "name":"Colima",
+                  "value":"3"
+               },
+               {  
+                  "name":"Guanajuato",
+                  "value":"12"
+               },
+               {  
+                  "name":"Jalisco",
+                  "value":"13"
+               },
+               {  
+                  "name":"Michoacan",
+                  "value":"14"
+               }
+            ],
+            "carbono_emissions":"44 municipios"
+         },
+        "residuos":{  
+            "title":"Municipios más vulnerables del Centro Sur",
+            "sector_values":[  
+               {  
+                  "name":"Distrito Federal",
+                  "value":"2"
+               },
+               {  
+                  "name":"Estado de México",
+                  "value":"19"
+               },
+               {  
+                  "name":"Hidalgo",
+                  "value":"15"
+               },
+               {  
+                  "name":"Morelos",
+                  "value":"5"
+               },
+               {  
+                  "name":"Puebla",
+                  "value":"9"
+               },
+               {  
+                  "name":"Querétaro",
+                  "value":"4"
+               },
+               {  
+                  "name":"Tlaxcala",
+                  "value":"9"
+               }
+            ],
+            "carbono_emissions":"63 municipios"
+         },
+        "carbono":{  
+            "title":"Municipios más vulnerables del Pacífico Sur y Golfo de México",
+            "sector_values":[  
+               {  
+                  "name":"Chiapas",
+                  "value":"24"
+               },
+               {  
+                  "name":"Guerrero",
+                  "value":"15"
+               },
+               {  
+                  "name":"Oaxaca",
+                  "value":"19"
+               },
+               {  
+                  "name":"Tabasco",
+                  "value":"12"
+               },
+               {  
+                  "name":"Veracruz",
+                  "value":"20"
+               },
+               {  
+                  "name":"Campeche",
+                  "value":"10"
+               },
+               {  
+                  "name":"Quintana Roo",
+                  "value":"3"
+               },
+               {  
+                  "name":"Yucatán",
+                  "value":"17"
+               }
+            ],
+            "carbono_emissions":"120 municipios"
+         }                                             
+        } 
+   }      
+}

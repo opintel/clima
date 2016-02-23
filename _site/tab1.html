@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Cambio Climatico</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+
+	<!-- Font Awesome -->
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+
+	<!--Tabs Style -->
+	<link type="text/css" rel="stylesheet" href="css/tabs_style.css" />
+
+	<link href="css/c3-master/c3.css" rel="stylesheet" type="text/css">    
+
+	<link href="css/scatterbar.css" rel="stylesheet" type="text/css">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:Bold' rel='stylesheet' type='text/css'>	
+	<!-- Custom styles for this template -->
+	<link href="css/main_style.css" rel="stylesheet">
+	<link rel="import" href="bower_components/polymer/polymer.html">
+	<link rel="import" href="bower_components/dgm-navbar/dgm-navbar.html">
+	<link rel="import" href="bower_components/dgm-footer/dgm-footer.html">
+
+</head>
+
+<body>	
+	<div class="nav-git-content">
+		<dgm-navbar class="center-block"></dgm-navbar>
+	</div>
+	<div class="principal-navbar">
+		<div class="nav-content center-block">
+			<div class="climatic-title">
+				<a href="index.html" class="climatic-changetext" style="color:white;">Cambio Climático</a>
+			</div>
+			<div class="tab1-nav pull-right">
+				<div class="top-tabs">
+					<a href="tab1.html" class="nav-tab-active">Emisiones</a>
+				</div>	
+				<div class="top-tabs">
+					<a href="tab2.html"><p>Actividades económicas</p></a>
+				</div>
+				<div class="top-tabs">
+					<a href="tab3.html"><p>Impactos</p></a>
+				</div>			
+				<div class="top-tabs">
+					<a href="tab4.html">Acciones</a>
+				</div>															
+			</div>
+		</div>
+	</div>
+	
+	<div class="container-clima">
+		<div id="responsiveTabsContainer">
+		
+		    <div id="tab-2">
+			    <div class="row">
+				    <div class="">
+						<p class="huge-title">Emisiones</p>						    
+					    <p class="black-text">
+						    Los científicos definen el Cambio Climático como todo cambio significativo en el sistema climático del planeta que puede permanecer por décadas o más tiempo. Puede ocasionarse debido a causas naturales o como resultado de actividades humanas. Su manifestación más evidente es el calentamiento global y se refiere al incremento promedio de las temperaturas terrestres y marinas a nivel global.
+					    </p>
+					</div>    
+			    </div>
+			    
+			    <div class="row">
+					<p class="subtitle" style="">
+						Inventario Nacional de Emisiones de Gases de Efecto Invernadero 2013 (Mt en CO<sub>2</sub>eq.)
+					</p>    		
+				</div>	
+												    
+			    <div class="row center-block" style="max-width:1150px; min-width:750px">
+					<div id="item1" class="side-box custom-tooltip col-xs-4" data-toggle="tooltip" data-placement="top" title="Title1">
+						<div class="box-image">
+							<div class="images-margin-side">
+								<img id="item1-img" class="img-responsive" src="">
+							</div>
+						</div>
+						<span class="box-text">
+							<strong><span id="item1-highlight" style="font-size:17px"></span></strong>
+							<span id="item1-description"></span>
+						<span>
+					</div>								
+
+					<div id="item2" class="side-box custom-tooltip col-xs-4" data-toggle="tooltip" data-placement="top" title="Title2">
+						<div class="box-image">
+							<div class="images-margin-side">
+								<img id="item2-img" class="img-responsive" src="" style="margin-top:10px">
+							</div>
+						</div>
+						<span class="box-text">
+							<strong><span id="item2-highlight" style="font-size:17px"></span></strong>
+							<span id="item2-description"> produce 665,304 millones de toneladas  de CO<sub>2</sub> eq al año</span>
+						<span>
+					</div>								
+
+					<div id="item3" class="side-box custom-tooltip col-xs-4" data-toggle="tooltip" data-placement="top" title="Title3">
+						<div class="box-image">
+							<div class="images-margin-side">
+								<img id="item3-img" class="img-responsive" src="">
+							</div>
+						</div>
+						<span class="box-text">
+							<strong><span id="item3-highlight" style="font-size:17px"></span></strong>
+							<span id="item3-description"></span>
+						<span>
+					</div>																						
+				</div> 
+				
+			    <div id="indicator-dialog" class="row indicator-dialog">
+				    <span></span>
+				</div>    
+				<br>
+
+
+				<div class="row">
+					<p class="subtitle" style="">
+						Balance Nacional de Emisiones de Gases de Efecto Invernadero 2013 (Mt en CO<sub>2</sub>eq.)
+					</p>											
+				</div>		
+				<!-- Tabla hardcodeada -->				
+				<div class="row">
+					<table style="width:100%; font-size: 13px;" class="table table-striped">
+						<tr style="border-top: #C5C5C5 solid; border-width:1px">
+							<td style="width:16.66%;"></td> 
+							<td style="width:16.66%;"><strong><p>Industria, petróleo y gas</p></strong></td> 
+							<td style="width:16.66%;"><strong><p>Fuentes Móviles</p></strong></td> 
+							<td style="width:16.66%;"><strong><p>Generación Eléctrica</p></strong></td> 
+							<td style="width:16.66%;"><strong><p>Agropecuario y USUCSS</p></strong></td> 
+							<td style="width:16.66%;"><strong><p>Residuos Residencial y Comercial</p></strong></td> 
+						</tr>
+						<tr style="border-top: #C5C5C5 solid; border-width:1px">
+							<td style="width:16.66%;"><strong><p>Emisiones del sector</p></strong></td> 
+							<td style="width:16.66%;"><strong><p>29.4% (195 millones de toneladas de CO<sub>2</sub> eq.)</p></strong></td> 
+							<td style="width:16.66%;"><strong><p>26.2% (174 millones de toneladas de CO<sub>2</sub> eq.)</p></strong></td> 
+							<td style="width:16.66%;"><strong><p>19.0% (126 millones de toneladas de CO<sub>2</sub> eq.)</p></strong></td> 
+							<td style="width:16.66%;"><strong><p>16.9% (112 millones de toneladas de CO<sub>2</sub> eq.)</p></strong></td> 
+							<td style="width:16.66%;"><strong><p>8.5% (56 millones de toneladas de CO<sub>2</sub> eq.)</p></strong></td> 
+						</tr>
+						
+						<tr style="border-top: #C5C5C5 solid; border-width:1px">
+							<td style="width:16.66%;"><strong><p>Desagregado</p></strong></td> 
+							<td style="width:16.66%;">
+								<p>
+									<strong><span>Petróleo y Gas </span></strong>
+									<span>12.1%</span>
+								</p>
+								<p>
+									<strong><span>Industria </span></strong>
+									<span>17.3%%</span>
+								</p>
+							</td> 	
+							<td style="width:16.66%;">
+								<p>
+									<strong><span>Autotransporte </span></strong>
+									<span>23.0%</span>
+								</p>
+								<p>
+									<strong><span>No Carretero </span></strong>
+									<span>1.5%</span>
+								</p>
+								<p>
+									<strong><span>Aviación </span></strong>
+									<span>1.1%</span>
+								</p>								
+								<p>
+									<strong><span>Marítimo </span></strong>
+									<span>0.3%</span>
+								</p>								
+								<p>
+									<strong><span>Ferrocarril </span></strong>
+									<span>0.3%</span>
+								</p>
+							</td> 
+							<td style="width:16.66%;">
+								<p>
+									<strong><span>Ciclo Combinado </span></strong>
+									<span>7.7%</span>
+								</p>
+								<p>
+									<strong><span>Termoeléctrica </span></strong>
+									<span>5.7%</span>
+								</p>								
+								<p>
+									<strong><span>Dual </span></strong>
+									<span>2.6%</span>
+								</p>								
+								<p>
+									<strong><span>Carboeléctrica </span></strong>
+									<span>2.6%</span>
+								</p>
+								<p>
+									<strong><span>Turbogas </span></strong>
+									<span>0.3%</span>
+								</p>
+								<p>
+									<strong><span>Combustión Interna </span></strong>
+									<span>0.1%</span>
+								</p>								
+							</td> 																				
+							<td style="width:16.66%;">
+								<p>
+									<strong><span>Agropecuario </span></strong>
+									<span>12%</span>
+								</p>
+								<p>
+									<strong><span>Uso de suelo y sivicultura </span></strong>
+									<span>4.9%</span>
+								</p>																
+							</td>
+							<td style="width:16.66%;">
+								<p>
+									<strong><span>Residuos</span></strong>
+									<span>4.6%</span>
+								</p>
+								<p>
+									<strong><span>Residencial y comercial </span></strong>
+									<span>3.9%</span>
+								</p>																
+							</td>  																				
+						</tr>
+						
+					</table>	
+				</div>	
+
+				<div class="">
+					<div class="row">
+						<div style="width: 700px;">
+							<div id="chart1"></div>
+							<p><i>*CO<sub>2</sub> capturado por permanencias en tierras forestales, asentamientos humanos, agrícolas y otras tierras.</i></p>
+							<p><i>** Emisiones totales menos las absorciones</i></p>
+						</div>	
+					</div>	
+				</div>
+
+			    <br>
+
+				<!-- Gráfica del BAU -->
+				
+				<div class="row">
+					<p class="subtitle" style="">
+						Escenarios de emisiones de gases de efecto invernadero 2013-2030
+					</p>			
+
+					<div class="col-xs-7">
+						<p class="black-text" style="padding-top: 30px; padding-bottom: 30px;">
+							Megatoneladas de CO<sub>2</sub> equivalente
+						</p>			
+						<div id="chart"></div>
+					</div>
+					<div class="col-xs-5">
+						<p class="black-text" style="padding-top: 30px; padding-bottom: 30px;">
+							Porcentajes de reducción en cada sector económico para alcanzar el escenario de mitigación INDC 2030
+						</p>			
+						<table class="percents_table">
+							<tr class="info_percents">
+								<td><span class="high-textpercent">Sector MITIGACIÓN 2030 (MtCO<sub>2</sub>e)</span></td>
+							</tr>
+							<tr class="info_percents">
+								<td><span class="high-textpercent">Petróleo y gas</span><span class="light-textpercent"> 19.2%</span></td>
+							</tr>
+							<tr class="info_percents">
+								<td><span class="high-textpercent">Transporte</span><span class="light-textpercent"> 48.2%</span></td>
+							</tr>
+							<tr class="info_percents">
+								<td><span class="high-textpercent">Residencial y Comercial</span><span class="light-textpercent"> 4.9%</span></td>
+							</tr>
+							<tr class="info_percents">
+								<td><span class="high-textpercent">Generación de Energía eléctrica</span><span class="light-textpercent"> 63.1%</span></td>
+							</tr>																																		<tr class="info_percents">
+								<td><span class="high-textpercent">Industrial</span><span class="light-textpercent"> 8.3%</span></td>
+							</tr>					
+							<tr class="info_percents">
+								<td><span class="high-textpercent">Residuos</span><span class="light-textpercent"> 13.8%</span></td>
+							</tr>			
+							<tr class="info_percents">
+								<td><span class="high-textpercent">Agricultura</span><span class="light-textpercent"> 7.2%</span></td>
+							</tr>
+							<tr class="info_percents">
+								<td><span class="high-textpercent">Uso de suelo, cambio de uso de suelo y silvicultura</span><span class="light-textpercent"> 46.6%</span></td>
+							</tr>																		
+						</table>
+					</div>					
+				</div>
+
+				<!-- Data table-->
+				<div class="row">
+					<h4 class="subtitle"><strong>Datos Abiertos</strong></h4>	
+					
+					<div class=""style="width:100%">
+						<div class="" style="display: inline-block; width:30%;">
+							
+							<span>Nombre</span>
+						</div>					
+							
+						<div class="" style="display: inline-block; width:20%;">
+							
+							<span>Dependencia</span>
+						</div>
+						
+						<div class="" style="display: inline-block; width:15%; ">
+							
+							<span>Fecha</span>
+						</div>
+						
+						<div class="" style="display: inline-block; width:20%;">
+							
+							<span>Formato</span>
+						</div>
+					</div>	
+									
+					<div class="data-table-container center-block">
+						<br>		
+						<div class="data-bar">
+							<div class="description-databar">
+								<p class="black-text">Inventario Nacional de Emisiones de Gases de Efecto Invernadero</p> 
+							</div>	
+							<div class="secretary-databar">
+								<p class="black-text">INECC</p>
+							</div>
+							<div class="datetext-databar">
+								<p class="black-text">26/Nov/2015</p>
+							</div>
+							<div class="formatcontainer-databar">
+								<div class="csv-format">
+									<p class="format-texts">CSV</p>
+								</div>
+								<!--<div class="klm-format">
+									<p class="format-texts">KLM</p>
+								</div>-->		
+							</div>
+							<div class="greyblock-databar pull-right">
+								<a href="http://dsiappsdev.semarnat.gob.mx/datos/cclimatico/inventario_de_emisiones_de_contaminantes_atmosfericos.csv"><img class="center-block green-bars" src="img/green_bars.svg" style="cursor:pointer"></a>
+							</div>		
+						</div>
+						<br>							
+					</div>										
+				</div>
+			    				    
+			</div>
+						    
+		</div>	
+    </div>
+    <!-- /.container -->
+    <div class="nav-git-content">
+		<dgm-footer></dgm-footer>
+	</div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    
+    <script src="js/jquery-1.11.0.min.js"></script>    
+    <script src="js/bootstrap.js"></script>
+
+	<!-- D3/C3 JS -->	
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>    
+    <script src="js/c3.js"></script>
+    
+	<script type="text/javascript" src="js/scatter001.js"></script>						    							
+    <script src="js/csvjson.js"></script>    
+
+	<script type="text/javascript" src="js/timeseries.js"></script>	
+
+	<script type="text/javascript">	
+		
+		//$.ajax("http://trebolbit.mx/cambio_climatico/data/JSON3.json", {					
+		$.ajax("http://opintel.github.io/clima/data/JSON3.json", {			
+		    success: function(data){
+
+			    var item1 = data.item1;
+			    var item2 = data.item2;
+			    var item3 = data.item3;			    			    
+			    //var item4 = data.item4;
+			    					
+				$("#item1-img").attr("src", item1.imageUrl);
+				$("#item1-highlight").text(item1.highlight);
+				$("#item1-description").text(" " +item1.description);
+				$("#item1").attr('title', item1.tooltipDescription).tooltip('fixTitle');
+				
+				$("#item2-img").attr("src", item2.imageUrl);
+				$("#item2-highlight").text(item2.highlight);
+				$("#item2-description").html(" " +item2.description);
+				$("#item2").attr('title', item2.tooltipDescription).tooltip('fixTitle');				
+				
+				$("#item3-img").attr("src", item3.imageUrl);
+				$("#item3-highlight").text(item3.highlight);
+				$("#item3-description").text(" " +item3.description);
+				$("#item3").attr('title', item3.tooltipDescription).tooltip('fixTitle');				
+
+
+		    },
+		    error: function(err){
+			    alert(JSON.stringify(err));
+		    }		    
+		});
+
+		$(function () {
+			$('[data-toggle="tooltip"]').tooltip({})
+		});
+		
+    		
+		var chart1 = c3.generate({
+			"bindto": "#chart1",
+		    data: {
+		        columns: [
+		            ['Industria, Petróleo y Gas', 195.404,0,0],
+		            ['Residuos, Residencial y Comercial', 56.542,0,0],
+		            ['Generación Energía Eléctrica', 126.607,0,0],
+		            ['Fuentes Móviles', 174.156,0,0],
+		            ['Agropecuario y Uso de Suelos', 112.59,0,0], 
+		            ['Permanencias y Cambio de Uso de Suelos', 0,-172.997,0],
+		            ['Emisiones Netas', 0,0,492.307],
+		        ],
+		        type: 'bar',
+		        groups: [
+		            ['Industria, Petróleo y Gas', 'Residuos, Residencial y Comercial', 'Generación Energía Eléctrica', 'Fuentes Móviles', 'Agropecuario y Uso de Suelos', 'Permanencias y Cambio de Uso de Suelos','Emisiones Netas'], ['Permanencias y Cambio de Uso de Suelos'],['Emisiones Netas']
+		        ]
+		    },
+		    color: {
+		            pattern: ['#cc0000','#660000','#990000','#b20000','#7f0000','#0fc94b','#330000']
+		    },
+		    axis: {
+		        x: {
+		            type: 'category',
+		            show: true,
+		            categories: ['Emisiones Totales', 'Absorciones*', 'Emisiones Netas**']
+		        },
+		        y: {
+		           label: 'Mt de CO2',
+		           tick: {
+                   		format: d3.format(',')
+              		}	
+		        }
+		    },
+		    grid: {
+		        x: {
+		        },			    
+		        y: {
+		            lines: [{value:0}],
+		            show: true
+		        }
+		    },
+			legend: {
+				position: 'right'
+			}
+		});
+
+	</script>  
+	<script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+  </body>	
+</html>
