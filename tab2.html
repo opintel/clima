@@ -75,7 +75,7 @@
 					<p class="black-text">El tamaño de la burbuja representa el costo en emisiones de cada peso de PIB generado</p>
 	      <div id="chart"></div>
       			</div>
-      			<div class="row">
+      	<div class="row">
 					<p class="subtitle">
 						Actividades relacionadas a la emisión de gases de efecto invernadero.
 					</p>
@@ -99,12 +99,14 @@
 							<p class="text-center map-year"><strong>2014</strong></p>
 						</div>
 					</div>
-                    <div class="row">
-                        <p class="subtitle" style="font-size: 12px;">
-						  <i><sub>*</sub> Los datos de Población y PIB estatales pertenecen al año 2014 -.</i>
+          <div class="row">
+          	<p class="subtitle" style="font-size: 12px;">
+						<i><sub>*</sub> Población estatal 2015. Fuente: CONAPO.</i></br>
+						<i><sub>*</sub> Superficie territorial estatal 2015. Fuente: INEGI.</i></br>
+						<i><sub>*</sub> PIB Corriente 2015. Fuente: Sistema Nacional de Cuentas Nacionales de México</i>
 						</p></br>
-                    </div>
-      			</div>
+          </div>
+      	</div>
 				<br>
 				<!-- Data table-->
 				<div class="row">
@@ -449,7 +451,7 @@
     	});
 
 $("#anios-container").on("click", "div", function() {
-	console.log($(this).text());
+	//console.log($(this).text());
 	if($(this).text() == 2010) {
 		anio = 2010;
 
@@ -1034,7 +1036,7 @@ function pintarMapa() {
 	info.update = function (props) {
 		this._div.innerHTML = (props ? '<h4>' + props.name + '</h4> <br>'
 			+ '<div style="text-align: left; font-size: 12px; font-weight: bold;">Población 2015: ' + d3.format(',')(props.pob_2015) + '<br>'
-			+ 'PIB Anual: $' + d3.format(',')(props.pib15_corr_mill) + '<br>'
+			+ 'PIB corriente 2015: $' + d3.format(',')(props.pib15_corr_mill) + ' mdp<br>'
 			+ 'Territorio: ' + d3.format(',d')(props.superficie_total) + ' Km<sup>2</sup></div><br>'
 			+ '<b>Top estados generadores</b><br>'
 			+ filas
@@ -1149,7 +1151,7 @@ function pintarMapa2() {
 	info.update = function (props) {
 		this._div.innerHTML = (props ? '<h4>' + props.name + '</h4> <br>'
 			+ '<div style="text-align: left; font-size: 12px; font-weight: bold;">Población 2015: ' + d3.format(',')(props.pob_2015) + '<br>'
-			+ 'PIB Anual: $' + d3.format(',')(props.pib15_corr_mill) + '<br>'
+			+ 'PIB corriente 2015: $' + d3.format(',')(props.pib15_corr_mill) + ' mdp<br>'
 			+ 'Territorio: ' + d3.format(',d')(props.superficie_total) + ' Km<sup>2</sup></div><br>'
 			+ '<b>Top estados generadores</b><br>'
 			+ filas
@@ -1261,7 +1263,7 @@ function pintarMapa3() {
 	info.update = function (props) {
 		this._div.innerHTML = (props ? '<h4>' + props.name + '</h4> <br>'
 			+ '<div style="text-align: left; font-size: 12px; font-weight: bold;">Población 2015: ' + d3.format(',')(props.pob_2015) + '<br>'
-			+ 'PIB Anual: $' + d3.format(',')(props.pib15_corr_mill) + '<br>'
+			+ 'PIB corriente 2015: $' + d3.format(',')(props.pib15_corr_mill) + ' mdp<br>'
 			+ 'Territorio: ' + d3.format(',d')(props.superficie_total) + '  Km<sup>2</sup></div><br>'
 			+ '<b>Top estados generadores</b><br>'
 			+ filas
@@ -1373,7 +1375,7 @@ function pintarMapa4() {
 	info.update = function (props) {
 		this._div.innerHTML = (props ? '<h4>' + props.name + '</h4> <br>'
 			+ '<div style="text-align: left; font-size: 12px; font-weight: bold;">Población 2015: ' + d3.format(',')(props.pob_2015) + '<br>'
-			+ 'PIB Anual: $' + d3.format(',')(props.pib15_corr_mill) + '<br>'
+			+ 'PIB corriente 2015: $' + d3.format(',')(props.pib15_corr_mill) + ' mdp<br>'
 			+ 'Territorio: ' + d3.format(',d')(props.superficie_total) + '  Km<sup>2</sup></div><br>'
 			+ '<b>Top estados generadores</b><br>'
 			+ filas
@@ -1484,7 +1486,7 @@ function pintarMapa5() {
 	info.update = function (props) {
 		this._div.innerHTML = (props ? '<h4>' + props.name + '</h4> <br>'
 			+ '<div style="text-align: left; font-size: 12px; font-weight: bold;">Población 2015: ' + d3.format(',')(props.pob_2015) + '<br>'
-			+ 'PIB Anual: $' + d3.format(',')(props.pib15_corr_mill) + '<br>'
+			+ 'PIB corriente 2015: $' + d3.format(',')(props.pib15_corr_mill) + ' mdp<br>'
 			+ 'Territorio: ' + d3.format(',d')(props.superficie_total) + '  Km<sup>2</sup></div><br>'
 			+ '<b>Top estados generadores</b><br>'
 			+ filas
@@ -1595,7 +1597,7 @@ function pintarMapa6() {
 	info.update = function (props) {
 		this._div.innerHTML = (props ? '<h4>' + props.name + '</h4> <br>'
 			+ '<div style="text-align: left; font-size: 12px; font-weight: bold;">Población 2015: ' + d3.format(',')(props.pob_2015) + '<br>'
-			+ 'PIB Anual: $' + d3.format(',')(props.pib15_corr_mill) + '<br>'
+			+ 'PIB corriente 2015: $' + d3.format(',')(props.pib15_corr_mill) + ' mdp<br>'
 			+ 'Territorio: ' + d3.format(',d')(props.superficie_total) + '  Km<sup>2</sup></div><br>'
 			+ '<b>Top estados generadores</b><br>'
 			+ filas
@@ -1706,7 +1708,7 @@ function pintarMapa7() {
 	info.update = function (props) {
 		this._div.innerHTML = (props ? '<h4>' + props.name + '</h4> <br>'
 			+ '<div style="text-align: left; font-size: 12px; font-weight: bold;">Población 2015: ' + d3.format(',')(props.pob_2015) + '<br>'
-			+ 'PIB Anual: $' + d3.format(',')(props.pib15_corr_mill) + '<br>'
+			+ 'PIB corriente 2015: $' + d3.format(',')(props.pib15_corr_mill) + ' mdp<br>'
 			+ 'Territorio: ' + d3.format(',d')(props.superficie_total) + '  Km<sup>2</sup></div><br>'
 			+ '<b>Top estados generadores</b><br>'
 			+ filas
@@ -1817,7 +1819,7 @@ function pintarMapa8() {
 	info.update = function (props) {
 		this._div.innerHTML = (props ? '<h4>' + props.name + '</h4> <br>'
 			+ '<div style="text-align: left; font-size: 12px; font-weight: bold;">Población 2015: ' + d3.format(',')(props.pob_2015) + '<br>'
-			+ 'PIB Anual: $' + d3.format(',')(props.pib15_corr_mill) + '<br>'
+			+ 'PIB corriente 2015: $' + d3.format(',')(props.pib15_corr_mill) + ' mdp<br>'
 			+ 'Territorio: ' + d3.format(',d')(props.superficie_total) + '  Km<sup>2</sup></div><br>'
 			+ '<b>Top estados generadores</b><br>'
 			+ filas
@@ -1928,7 +1930,7 @@ function pintarMapa9() {
 	info.update = function (props) {
 		this._div.innerHTML = (props ? '<h4>' + props.name + '</h4> <br>'
 			+ '<div style="text-align: left; font-size: 12px; font-weight: bold;">Población 2015: ' + d3.format(',')(props.pob_2015) + '<br>'
-			+ 'PIB Anual: $' + d3.format(',')(props.pib15_corr_mill) + '<br>'
+			+ 'PIB corriente 2015: $' + d3.format(',')(props.pib15_corr_mill) + ' mdp<br>'
 			+ 'Territorio: ' + d3.format(',d')(props.superficie_total) + '  Km<sup>2</sup></div><br>'
 			+ '<b>Top estados generadores</b><br>'
 			+ filas
@@ -2038,7 +2040,7 @@ function pintarMapa10() {
 	info.update = function (props) {
 		this._div.innerHTML = (props ? '<h4>' + props.name + '</h4> <br>'
 			+ '<div style="text-align: left; font-size: 12px; font-weight: bold;">Población 2015: ' + d3.format(',')(props.pob_2015) + '<br>'
-			+ 'PIB Anual: $' + d3.format(',')(props.pib15_corr_mill) + '<br>'
+			+ 'PIB corriente 2015: $' + d3.format(',')(props.pib15_corr_mill) + ' mdp<br>'
 			+ 'Territorio: ' + d3.format(',d')(props.superficie_total) + '  Km<sup>2</sup></div><br>'
 			+ '<b>Top estados generadores</b><br>'
 			+ filas
@@ -2148,7 +2150,7 @@ function pintarMapa11() {
 	info.update = function (props) {
 		this._div.innerHTML = (props ? '<h4>' + props.name + '</h4> <br>'
 			+ '<div style="text-align: left; font-size: 12px; font-weight: bold;">Población 2015: ' + d3.format(',')(props.pob_2015) + '<br>'
-			+ 'PIB Anual: $' + d3.format(',')(props.pib15_corr_mill) + '<br>'
+			+ 'PIB corriente 2015: $' + d3.format(',')(props.pib15_corr_mill) + ' mdp<br>'
 			+ 'Territorio: ' + d3.format(',d')(props.superficie_total) + '  Km<sup>2</sup></div><br>'
 			+ '<b>Top estados generadores</b><br>'
 			+ filas
@@ -2229,7 +2231,7 @@ $.ajax({
 	url: "data/screen3.json",
 	async: false,
 	success: function(data){
-		console.log("data--- ",data);
+		//console.log("data--- ",data);
 		estados = data;
 		topEs = data;
 		estados2 = data;
@@ -2287,7 +2289,7 @@ var map = L.map('map', {zoomControl: true}).setView([25.511791, -101.080072], 5)
 			crearFilasIndicador1();
 			this._div.innerHTML = (props ? '<h4>' + props.name + '</h4> <br>'
 				+ '<div style="text-align: left; font-size: 12px; font-weight: bold;">Población 2015: ' + d3.format(',')(props.pob_2015) + '<br>'
-				+ 'PIB Anual: $' + d3.format(',')(props.pib15_corr_mill) + '<br>'
+				+ 'PIB corriente 2015: $' + d3.format(',')(props.pib15_corr_mill) + ' mdp<br>'
 				+ 'Territorio--: ' + d3.format(",d") + '  Km<sup>2</sup></div><br>'
 				+ '<b>Top estados generadores</b><br>'
 				+ filas
@@ -2352,38 +2354,71 @@ var map = L.map('map', {zoomControl: true}).setView([25.511791, -101.080072], 5)
 			};
 		}
 
+		// function highlightFeature(e) {
+		// 	var layer = e.target;
+		//
+		// 	layer.setStyle({
+		// 		weight: 5,
+		// 		color: '#666',
+		// 		dashArray: '',
+		// 		fillOpacity: 0.7
+		// 	});
+		//
+		// 	if (!L.Browser.ie && !L.Browser.opera) {
+		// 		layer.bringToFront();
+		// 	}
+		//
+		// 	info.update(layer.feature.properties);
+		// }
+
 		function highlightFeature(e) {
-			var layer = e.target;
+			if (!dsblHov) {
+				//console.info("false");
+				var layer = e.target;
+				layer.setStyle({
+					weight: 5,
+					color: '#666',
+					dashArray: '',
+					fillOpacity: 0.7
+				});
 
-			layer.setStyle({
-				weight: 5,
-				color: '#666',
-				dashArray: '',
-				fillOpacity: 0.7
-			});
+				if (!L.Browser.ie && !L.Browser.opera) {
+					layer.bringToFront();
+				}
 
-			if (!L.Browser.ie && !L.Browser.opera) {
-				layer.bringToFront();
+				info.update(layer.feature.properties);
 			}
-
-			info.update(layer.feature.properties);
 		}
 
 		var geojson;
 
 		function resetHighlight(e) {
 			geojson.resetStyle(e.target);
-			info.update();
+			//info.update();
 		}
 
 		function zoomToFeature(e) {
 			map.fitBounds(e.target.getBounds());
 		}
 
+		var dsblHov = false;
+    function disableHover() {
+      if (dsblHov == false) {
+        dsblHov = true;
+        $('#map .leaflet-right .leaflet-control').css('border','2px solid #4D92DF');
+        $('.leaflet-control-attribution').css('border','none');
+      } else {
+        dsblHov = false;
+        $('#map .leaflet-right .leaflet-control').css('border','none');
+      }
+      //console.log(dsblHov);
+    }
+
 		function onEachFeature(feature, layer) {
 			layer.on({
 				mouseover: highlightFeature,
-				mouseout: resetHighlight
+				mouseout: resetHighlight,
+				click: disableHover
 			});
 		}
 
