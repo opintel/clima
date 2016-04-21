@@ -1,0 +1,1692 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Cambio Climático</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+
+	<!-- Custom styles for this template -->
+	<link href="css/main_style.css" rel="stylesheet">
+
+	<!-- Leaflet -->
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+
+</head>
+
+<body>
+
+	<div class="container-clima">
+		<div id="responsiveTabsContainer">
+
+		  <div id="tab-4">
+				<div class="row">
+					<p class="subtitle">Vulnerabilidad y escenarios de cambio climático</p>
+					<div class="select-container">
+						<p class="text-center select-text">
+							Selecciona un indicador
+						</p>
+						<select id="opciones" class="indicator_select">
+						</select>
+					</div>
+					<br>
+					<div class="">
+						<div class="">
+							<div id="map"></div>
+						</div>
+					</div>
+					<br>
+				</div>
+				<br>
+			</div>
+		</div>
+  </div>
+
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+
+  <script src="js/jquery-1.11.0.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+
+	<!-- Leaflet -->
+	<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+
+	<script type="text/javascript">
+
+		$(function () {
+			$('[data-toggle="tooltip"]').tooltip({})
+		});
+
+		var estados;
+		var estados2;
+    	var anio = 2014;
+    	var op = 1;
+    	var topEs;
+    	var filas = "";
+    	var ind;
+
+
+    	$('#opciones').change(function() {
+
+    		if($(this).val() == 1) {
+    			anio = 2014;
+    			crearAnios1();
+
+    			$('#anio2014').addClass("aqua-text");
+
+    			// crearFilasIndicador1();
+    			pintarMapa();
+    		} else if($(this).val() == 2) {
+    			anio = 2014;
+    			crearAnios2();
+
+    			$('#anio2014').addClass("aqua-text");
+
+    			// crearFilasIndicador2();
+    			pintarMapa2();
+    		} else if($(this).val() == 3) {
+    			anio = 2014;
+    			crearAnios3();
+
+    			$('#anio2014').addClass("aqua-text");
+
+    			// crearFilasIndicador3();
+    			pintarMapa3();
+    		} else if($(this).val() == 4) {
+				anio = 2014;
+    			crearAnios4();
+
+				$('#anio2014').addClass("aqua-text");
+
+    			// crearFilasIndicador4();
+    			pintarMapa4();
+    		} else if($(this).val() == 5) {
+				anio = 2014;
+    			crearAnios5();
+
+				$('#anio2014').addClass("aqua-text");
+
+    			// crearFilasIndicador5();
+    			pintarMapa5();
+    		} else if($(this).val() == 6) {
+				anio = 2014;
+    			crearAnios6();
+
+				$('#anio2014').addClass("aqua-text");
+
+    			// crearFilasIndicador6();
+    			pintarMapa6();
+    		} else if($(this).val() == 7) {
+				anio = 2014;
+    			crearAnios7();
+
+				$('#anio2015').addClass("aqua-text");
+
+    			// crearFilasIndicador7();
+    			pintarMapa7();
+    		} else if($(this).val() == 8) {
+				anio = 2014;
+    			crearAnios8();
+
+				$('#anio2015').addClass("aqua-text");
+
+    			// crearFilasIndicador8();
+    			pintarMapa8();
+    		} else if($(this).val() == 9) {
+				anio = 2015;
+    			crearAnios9();
+
+				$('#anio2015').addClass("aqua-text");
+
+    			// crearFilasIndicador9();
+    			pintarMapa9();
+    		} else if($(this).val() == 10) {
+				anio = 2015;
+    			crearAnios10();
+
+				$('#anio2015').addClass("aqua-text");
+
+    			// crearFilasIndicador9();
+    			pintarMapa10();
+    		} else if($(this).val() == 11) {
+				anio = 2015;
+    			crearAnios11();
+
+				$('#anio2015').addClass("aqua-text");
+
+    			// crearFilasIndicador9();
+    			pintarMapa11();
+    		} else if($(this).val() == 12) {
+				anio = 2015;
+    			crearAnios12();
+
+				$('#anio2015').addClass("aqua-text");
+
+    			// crearFilasIndicador9();
+    			pintarMapa12();
+    		} else if($(this).val() == 13) {
+				anio = 2015;
+    			crearAnios13();
+
+				$('#anio2015').addClass("aqua-text");
+
+    			// crearFilasIndicador9();
+    			pintarMapa13();
+    		} else if($(this).val() == 14) {
+				anio = 2015;
+    			crearAnios14();
+
+				$('#anio2015').addClass("aqua-text");
+
+    			// crearFilasIndicador9();
+    			pintarMapa14();
+    		}
+
+    	});
+
+function crearAnios1() {
+
+	topEs.features.forEach(function(el) {
+		el.properties.pmunsv.forEach(function(ele, index) {
+			if ( ele.tiempo == anio ) {
+				ind = index;
+			}
+		});
+	});
+
+	$("#anios-container").empty();
+	topEs.features[0].properties.pmunsv.forEach(function(el) {
+		if(el.tiempo >= 2010) {
+			$("#anios-container").append('<div style="width: 100%;" id="anio' + el.tiempo + '"><p class="text-center map-year"><strong>' + el.tiempo + '</strong></p></div>');
+		}
+	});
+}
+
+function crearAnios2() {
+
+	topEs.features.forEach(function(el) {
+		el.properties.pobmunsv.forEach(function(ele, index) {
+			if ( ele.tiempo == anio ) {
+				ind = index;
+			}
+		});
+	});
+
+	$("#anios-container").empty();
+	topEs.features[0].properties.pobmunsv.forEach(function(el) {
+		if(el.tiempo >= 2010) {
+			$("#anios-container").append('<div style="width: 100%;" id="anio' + el.tiempo + '"><p class="text-center map-year"><strong>' + el.tiempo + '</strong></p></div>');
+		}
+	});
+}
+
+function crearAnios3() {
+
+	topEs.features.forEach(function(el) {
+		el.properties.ppobmunsv.forEach(function(ele, index) {
+			if ( ele.tiempo == anio ) {
+				ind = index;
+			}
+		});
+	});
+
+	$("#anios-container").empty();
+	topEs.features[0].properties.ppobmunsv.forEach(function(el) {
+		if(el.tiempo >= 2010) {
+			$("#anios-container").append('<div style="width: 100%;" id="anio' + el.tiempo + '"><p class="text-center map-year"><strong>' + el.tiempo + '</strong></p></div>');
+		}
+	});
+}
+
+function crearAnios4() {
+
+	topEs.features.forEach(function(el) {
+		el.properties.rec.forEach(function(ele, index) {
+			if ( ele.tiempo == anio ) {
+				ind = index;
+			}
+		});
+	});
+
+	$("#anios-container").empty();
+	topEs.features[0].properties.rec.forEach(function(el) {
+		if(el.tiempo >= 2010) {
+			$("#anios-container").append('<div style="width: 100%;" id="anio' + el.tiempo + '"><p class="text-center map-year"><strong>' + el.tiempo + '</strong></p></div>');
+		}
+	});
+}
+
+function crearAnios5() {
+
+	topEs.features.forEach(function(el) {
+		el.properties.ppobpob.forEach(function(ele, index) {
+			if ( ele.tiempo == anio ) {
+				ind = index;
+			}
+		});
+	});
+
+	$("#anios-container").empty();
+	topEs.features[0].properties.ppobpob.forEach(function(el) {
+		if(el.tiempo >= 2010) {
+			$("#anios-container").append('<div style="width: 100%;" id="anio' + el.tiempo + '"><p class="text-center map-year"><strong>' + el.tiempo + '</strong></p></div>');
+		}
+	});
+}
+
+function crearAnios6() {
+
+	topEs.features.forEach(function(el) {
+		el.properties.idh.forEach(function(ele, index) {
+			if ( ele.tiempo == anio ) {
+				ind = index;
+			}
+		});
+	});
+
+	$("#anios-container").empty();
+	topEs.features[0].properties.idh.forEach(function(el) {
+		if(el.tiempo >= 2010) {
+			$("#anios-container").append('<div style="width: 100%;" id="anio' + el.tiempo + '"><p class="text-center map-year"><strong>' + el.tiempo + '</strong></p></div>');
+		}
+	});
+}
+
+function crearAnios7() {
+
+	topEs.features.forEach(function(el) {
+		el.properties.declara.forEach(function(ele, index) {
+			if ( ele.tiempo == anio ) {
+				ind = index;
+			}
+		});
+	});
+
+	$("#anios-container").empty();
+	topEs.features[0].properties.declara.forEach(function(el) {
+		if(el.tiempo >= 2010) {
+			$("#anios-container").append('<div style="width: 100%;" id="anio' + el.tiempo + '"><p class="text-center map-year"><strong>' + el.tiempo + '</strong></p></div>');
+		}
+	});
+}
+
+function crearAnios8() {
+
+	topEs.features.forEach(function(el) {
+		el.properties.n_munsv.forEach(function(ele, index) {
+			if ( ele.tiempo == anio ) {
+				ind = index;
+			}
+		});
+	});
+
+	$("#anios-container").empty();
+	topEs.features[0].properties.n_munsv.forEach(function(el) {
+		if(el.tiempo >= 2010) {
+			$("#anios-container").append('<div style="width: 100%;" id="anio' + el.tiempo + '"><p class="text-center map-year"><strong>' + el.tiempo + '</strong></p></div>');
+		}
+	});
+}
+
+function crearAnios9() {
+
+	estados2.features.forEach(function(el) {
+		el.properties.precip45.forEach(function(ele, index) {
+			if ( ele.tiempo == anio ) {
+				ind = index;
+			}
+		});
+	});
+
+	$("#anios-container").empty();
+	estados2.features[0].properties.precip45.forEach(function(el) {
+		if(el.tiempo >= 2010) {
+			$("#anios-container").append('<div style="width: 100%;" id="anio' + el.tiempo + '"><p class="text-center map-year"><strong>' + el.tiempo + '</strong></p></div>');
+		}
+	});
+}
+
+function crearAnios10() {
+
+	estados2.features.forEach(function(el) {
+		el.properties.precip85.forEach(function(ele, index) {
+			if ( ele.tiempo == anio ) {
+				ind = index;
+			}
+		});
+	});
+
+	$("#anios-container").empty();
+	estados2.features[0].properties.precip85.forEach(function(el) {
+		if(el.tiempo >= 2010) {
+			$("#anios-container").append('<div style="width: 100%;" id="anio' + el.tiempo + '"><p class="text-center map-year"><strong>' + el.tiempo + '</strong></p></div>');
+		}
+	});
+}
+
+function crearAnios11() {
+
+	estados2.features.forEach(function(el) {
+		el.properties.tempmin45.forEach(function(ele, index) {
+			if ( ele.tiempo == anio ) {
+				ind = index;
+			}
+		});
+	});
+
+	$("#anios-container").empty();
+	estados2.features[0].properties.tempmin45.forEach(function(el) {
+		if(el.tiempo >= 2010) {
+			$("#anios-container").append('<div style="width: 100%;" id="anio' + el.tiempo + '"><p class="text-center map-year"><strong>' + el.tiempo + '</strong></p></div>');
+		}
+	});
+}
+
+
+function crearAnios12() {
+
+	estados2.features.forEach(function(el) {
+		el.properties.tempmin85.forEach(function(ele, index) {
+			if ( ele.tiempo == anio ) {
+				ind = index;
+			}
+		});
+	});
+
+	$("#anios-container").empty();
+	estados2.features[0].properties.tempmin85.forEach(function(el) {
+		if(el.tiempo >= 2010) {
+			$("#anios-container").append('<div style="width: 100%;" id="anio' + el.tiempo + '"><p class="text-center map-year"><strong>' + el.tiempo + '</strong></p></div>');
+		}
+	});
+}
+
+
+function crearAnios13() {
+
+	estados2.features.forEach(function(el) {
+		el.properties.tempmax45.forEach(function(ele, index) {
+			if ( ele.tiempo == anio ) {
+				ind = index;
+			}
+		});
+	});
+
+	$("#anios-container").empty();
+	estados2.features[0].properties.tempmax45.forEach(function(el) {
+		if(el.tiempo >= 2010) {
+			$("#anios-container").append('<div style="width: 100%;" id="anio' + el.tiempo + '"><p class="text-center map-year"><strong>' + el.tiempo + '</strong></p></div>');
+		}
+	});
+}
+
+
+function crearAnios14() {
+
+	estados2.features.forEach(function(el) {
+		el.properties.tempmax85.forEach(function(ele, index) {
+			if ( ele.tiempo == anio ) {
+				ind = index;
+			}
+		});
+	});
+
+	$("#anios-container").empty();
+	estados2.features[0].properties.tempmax85.forEach(function(el) {
+		if(el.tiempo >= 2010) {
+			$("#anios-container").append('<div style="width: 100%;" id="anio' + el.tiempo + '"><p class="text-center map-year"><strong>' + el.tiempo + '</strong></p></div>');
+		}
+	});
+}
+
+
+
+// function crearFilasIndicador1() {
+
+// 	topEs.features.sort(function(a,b) {
+// 		return b.properties.pmunsv[ind].valor - a.properties.pmunsv[ind].valor;
+// 	});
+
+// 	filas = '<table class="table table-striped table-condensed table-top"><tr><td><b>Estado</b></td><td><b>CO2</b></td><td><b>PIB</b></td></tr>'
+// 	+ '<tr><td>' + topEs.features[0].properties.name + '</td><td>' + topEs.features[0].properties.pmunsv[ind].valor + '</td><td>'+topEs.features[0].properties.valoragregado_2014+'</td></tr>'
+// 	+ '<tr><td>' + topEs.features[1].properties.name + '</td><td>' + topEs.features[1].properties.pmunsv[ind].valor + '</td><td>'+topEs.features[1].properties.valoragregado_2014+'</td></tr>'
+// 	+ '<tr><td>' + topEs.features[2].properties.name + '</td><td>' + topEs.features[2].properties.pmunsv[ind].valor + '</td><td>'+topEs.features[2].properties.valoragregado_2014+'</td></tr>'
+// 	+ '<tr><td>' + topEs.features[3].properties.name + '</td><td>' + topEs.features[3].properties.pmunsv[ind].valor + '</td><td>'+topEs.features[3].properties.valoragregado_2014+'</td></tr>'
+// 	+ '<tr><td>' + topEs.features[4].properties.name + '</td><td>' + topEs.features[4].properties.pmunsv[ind].valor + '</td><td>'+topEs.features[4].properties.valoragregado_2014+'</td></tr>'
+// 	+ '</table>';
+
+// }
+
+
+function pintarMapa() {
+
+	function getColor1(d) {
+		return	d > 70 		? 	'#00664e' :
+				d > 60 		? 	'#009975' :
+				d > 50 		? 	'#00cc9c' :
+				d > 40 		? 	'#00ffc3' :
+				d > 30 		? 	'#33ffcf' :
+				d > 20 		? 	'#66ffdb' :
+				d > 10 		? 	'#99ffe7' :
+								'#b3ffed' ;
+	}
+
+	function style1(feature) {
+		return {
+			weight: 2,
+			opacity: 1,
+			color: 'white',
+			dashArray: '3',
+			fillOpacity: 0.7,
+			fillColor: getColor1((feature.properties.pmunsv[ind].valor * 100))
+		};
+	}
+
+	info.removeFrom(map);
+
+	info.onAdd = function (map) {
+		this._div = L.DomUtil.create('div', 'info');
+		this.update();
+		return this._div;
+	}
+
+	info.update = function (props) {
+		this._div.innerHTML = (props ? '<h5>' + props.pmunsv[ind].nombre + '</h5>'
+				+ '<h5>' + (props.pmunsv[ind].valor * 100) + ' % </h5>' : '');
+	};
+
+	info.addTo(map);
+
+	map.removeLayer(geojson);
+
+	geojson = L.geoJson(estados, {
+		style: style1,
+		onEachFeature: onEachFeature
+	}).addTo(map);
+
+
+	legend.removeFrom(map);
+
+	legend.onAdd = function (map) {
+
+		var div = L.DomUtil.create('div', 'info legend'),
+		grades = [0, 20, 30, 40, 50, 60, 70, 80],
+		labels = [],
+		from, to;
+
+		for (var i = 0; i < grades.length; i++) {
+			from = grades[i];
+			to = grades[i + 1];
+
+			labels.push(
+				'<i style="background:' + getColor1(from + 1) + '"></i> ' +
+				from + (to ? '&ndash;' + to : '+'));
+		}
+
+		div.innerHTML = labels.join('<br>');
+		return div;
+	};
+
+	legend.addTo(map);
+
+}
+
+
+function pintarMapa2() {
+
+	function getColor2(d) {
+		return 	d > 490000	? 	'#804000' :
+				d > 420000	? 	'#b35900' :
+				d > 350000	? 	'#e67300' :
+				d > 280000	? 	'#ff8c1a' :
+				d > 210000	? 	'#ffa64d' :
+				d > 140000	? 	'#ffbf80' :
+				d > 70000	? 	'#ffcc99' :
+								'#ffe6cc' ;
+	}
+
+	function style2(feature) {
+		return {
+			weight: 2,
+			opacity: 1,
+			color: 'white',
+			dashArray: '3',
+			fillOpacity: 0.7,
+			fillColor: getColor2(feature.properties.pobmunsv[ind].valor)
+		};
+	}
+
+	info.removeFrom(map);
+
+	info.onAdd = function (map) {
+		this._div = L.DomUtil.create('div', 'info');
+		this.update();
+		return this._div;
+	}
+
+	info.update = function (props) {
+		this._div.innerHTML = (props ? '<h5>' + props.pobmunsv[ind].nombre + '</h5>'
+				+ '<h5>' + props.pobmunsv[ind].valor + ' </h5>' : '');
+	};
+
+	info.addTo(map);
+
+	map.removeLayer(geojson);
+
+	geojson = L.geoJson(estados, {
+		style: style2,
+		onEachFeature: onEachFeature
+	}).addTo(map);
+
+
+	legend.removeFrom(map);
+
+	legend.onAdd = function (map) {
+
+		var div = L.DomUtil.create('div', 'info legend'),
+		grades = [0, 70000, 140000, 210000, 280000, 350000, 420000, 490000],
+		labels = [],
+		from, to;
+
+		for (var i = 0; i < grades.length; i++) {
+			from = grades[i];
+			to = grades[i + 1];
+
+			labels.push(
+				'<i style="background:' + getColor2(from + 1) + '"></i> ' +
+				from + (to ? '&ndash;' + to : '+'));
+		}
+
+		div.innerHTML = labels.join('<br>');
+		return div;
+	};
+
+	legend.addTo(map);
+
+}
+
+function pintarMapa3() {
+
+	function getColor3(d) {
+		return	d > 70 		? 	'#1e3448' :
+				d > 60 		? 	'#2e4d6b' :
+				d > 50 		? 	'#3d678f' :
+				d > 40 		? 	'#4c81b3' :
+				d > 30 		? 	'#709ac2' :
+				d > 20 		? 	'#94b3d1' :
+				d > 10 		? 	'#b7cde1' :
+								'#cbd8e7' ;
+	}
+
+	function style3(feature) {
+		return {
+			weight: 2,
+			opacity: 1,
+			color: 'white',
+			dashArray: '3',
+			fillOpacity: 0.7,
+			fillColor: getColor3((feature.properties.ppobmunsv[ind].valor * 100))
+		};
+	}
+
+	info.removeFrom(map);
+
+	info.onAdd = function (map) {
+		this._div = L.DomUtil.create('div', 'info');
+		this.update();
+		return this._div;
+	}
+
+	info.update = function (props) {
+		this._div.innerHTML = (props ? '<h5>' + props.ppobmunsv[ind].nombre + '</h5>'
+				+ '<h5>' + (props.ppobmunsv[ind].valor * 100) + ' % </h5>' : '');
+	};
+
+	info.addTo(map);
+
+	map.removeLayer(geojson);
+
+	geojson = L.geoJson(estados, {
+		style: style3,
+		onEachFeature: onEachFeature
+	}).addTo(map);
+
+	legend.removeFrom(map);
+
+	legend.onAdd = function (map) {
+
+		var div = L.DomUtil.create('div', 'info legend'),
+		grades = [0, 20, 30, 40, 50, 60, 70, 80],
+		labels = [],
+		from, to;
+
+		for (var i = 0; i < grades.length; i++) {
+			from = grades[i];
+			to = grades[i + 1];
+
+			labels.push(
+				'<i style="background:' + getColor3(from + 1) + '"></i> ' +
+				from + (to ? '&ndash;' + to : '+'));
+		}
+
+		div.innerHTML = labels.join('<br>');
+		return div;
+	};
+
+	legend.addTo(map);
+}
+
+
+
+function pintarMapa4() {
+
+	function getColor4(d) {
+		return	d > 70000000 	? 	'#660066' :
+				d > 60000000 	? 	'#990099' :
+				d > 50000000 	? 	'#cc00cc' :
+				d > 40000000 	? 	'#ff00ff' :
+				d > 30000000 	? 	'#ff33ff' :
+				d > 20000000 	? 	'#ff66ff' :
+				d > 10000000 	? 	'#ff99ff' :
+									'#ffccff' ;
+	}
+
+	function style4(feature) {
+		return {
+			weight: 2,
+			opacity: 1,
+			color: 'white',
+			dashArray: '3',
+			fillOpacity: 0.7,
+			fillColor: getColor4(feature.properties.rec[ind].valor)
+		};
+	}
+
+	info.removeFrom(map);
+
+	info.onAdd = function (map) {
+		this._div = L.DomUtil.create('div', 'info');
+		this.update();
+		return this._div;
+	}
+
+	info.update = function (props) {
+		this._div.innerHTML = (props ? '<h5>' + props.rec[ind].nombre + '</h5>'
+				+ '<h5>' + props.rec[ind].valor + '</h5>' : '');
+	};
+
+	info.addTo(map);
+
+	map.removeLayer(geojson);
+
+	geojson = L.geoJson(estados, {
+		style: style4,
+		onEachFeature: onEachFeature
+	}).addTo(map);
+
+	legend.removeFrom(map);
+
+	legend.onAdd = function (map) {
+
+		var div = L.DomUtil.create('div', 'info legend'),
+		grades = [0, 500, 1000, 1500, 2000, 2500, 3000, 3500],
+		labels = [],
+		from, to;
+
+		for (var i = 0; i < grades.length; i++) {
+			from = grades[i];
+			to = grades[i + 1];
+
+			labels.push(
+				'<i style="background:' + getColor4(from + 1) + '"></i> ' +
+				from + (to ? '&ndash;' + to : '+'));
+		}
+
+		div.innerHTML = labels.join('<br>');
+		return div;
+	};
+
+	legend.addTo(map);
+}
+
+
+function pintarMapa5() {
+
+	function getColor5(d) {
+		return	d > 70	? 	'#220066' :
+				d > 60 	? 	'#330099' :
+				d > 50 	? 	'#4400cc' :
+				d > 40 	? 	'#5500ff' :
+				d > 30	? 	'#7733ff' :
+				d > 20	? 	'#9966ff' :
+				d > 10	? 	'#bb99ff' :
+							'#ddccff' ;
+	}
+
+	function style5(feature) {
+		return {
+			weight: 2,
+			opacity: 1,
+			color: 'white',
+			dashArray: '3',
+			fillOpacity: 0.7,
+			fillColor: getColor5((feature.properties.ppobpob[ind].valor * 100))
+		};
+	}
+
+	info.removeFrom(map);
+
+	info.onAdd = function (map) {
+		this._div = L.DomUtil.create('div', 'info');
+		this.update();
+		return this._div;
+	}
+
+	info.update = function (props) {
+		this._div.innerHTML = (props ? '<h5>' + props.ppobpob[ind].nombre + '</h5>'
+				+ '<h5>' + (props.ppobpob[ind].valor * 100) + ' % </h5>' : '');
+	};
+
+	info.addTo(map);
+
+	map.removeLayer(geojson);
+
+	geojson = L.geoJson(estados, {
+		style: style5,
+		onEachFeature: onEachFeature
+	}).addTo(map);
+
+	legend.removeFrom(map);
+
+	legend.onAdd = function (map) {
+
+		var div = L.DomUtil.create('div', 'info legend'),
+		grades = [0, 10, 20, 30, 40, 50, 60, 70],
+		labels = [],
+		from, to;
+
+		for (var i = 0; i < grades.length; i++) {
+			from = grades[i];
+			to = grades[i + 1];
+
+			labels.push(
+				'<i style="background:' + getColor5(from + 1) + '"></i> ' +
+				from + (to ? '&ndash;' + to : '+'));
+		}
+
+		div.innerHTML = labels.join('<br>');
+		return div;
+	};
+
+	legend.addTo(map);
+}
+
+
+function pintarMapa6() {
+
+	function getColor6(d) {
+		return	d > 90 	? 	'#663300' :
+				d > 80 	? 	'#994c00' :
+				d > 70 	? 	'#cc6600' :
+				d > 60 	? 	'#ff8000' :
+				d > 50 	? 	'#ff9933' :
+				d > 40 	? 	'#ffb366' :
+				d > 30	? 	'#ffcc99' :
+							'#ffe6cc' ;
+	}
+
+	function style6(feature) {
+		return {
+			weight: 2,
+			opacity: 1,
+			color: 'white',
+			dashArray: '3',
+			fillOpacity: 0.7,
+			fillColor: getColor6((feature.properties.idh[ind].valor * 100))
+		};
+	}
+
+	info.removeFrom(map);
+
+	info.onAdd = function (map) {
+		this._div = L.DomUtil.create('div', 'info');
+		this.update();
+		return this._div;
+	}
+
+	info.update = function (props) {
+		this._div.innerHTML = (props ? '<h5>' + props.idh[ind].nombre + '</h5>'
+				+ '<h5>' + (props.idh[ind].valor * 100) + ' % </h5>' : '');
+	};
+
+	info.addTo(map);
+
+	map.removeLayer(geojson);
+
+	geojson = L.geoJson(estados, {
+		style: style6,
+		onEachFeature: onEachFeature
+	}).addTo(map);
+
+	legend.removeFrom(map);
+
+	legend.onAdd = function (map) {
+
+		var div = L.DomUtil.create('div', 'info legend'),
+		grades = [0, 30, 40, 50, 60, 70, 80, 90],
+		labels = [],
+		from, to;
+
+		for (var i = 0; i < grades.length; i++) {
+			from = grades[i];
+			to = grades[i + 1];
+
+			labels.push(
+				'<i style="background:' + getColor6(from + 1) + '"></i> ' +
+				from + (to ? '&ndash;' + to : '+'));
+		}
+
+		div.innerHTML = labels.join('<br>');
+		return div;
+	};
+
+	legend.addTo(map);
+}
+
+function pintarMapa7() {
+
+	function getColor7(d) {
+		return	d > 90 	? 	'#4c0099' :
+				d > 80 	? 	'#5900b3' :
+				d > 70 	? 	'#6600cc' :
+				d > 60 	? 	'#7f00ff' :
+				d > 50 	? 	'#9933ff' :
+				d > 40 	? 	'#b266ff' :
+				d > 30	? 	'#cc99ff' :
+							'#e5ccff' ;
+	}
+
+	function style7(feature) {
+		return {
+			weight: 2,
+			opacity: 1,
+			color: 'white',
+			dashArray: '3',
+			fillOpacity: 0.7,
+			fillColor: getColor7(feature.properties.declara[ind].valor)
+		};
+	}
+
+	info.removeFrom(map);
+
+	info.onAdd = function (map) {
+		this._div = L.DomUtil.create('div', 'info');
+		this.update();
+		return this._div;
+	}
+
+	info.update = function (props) {
+		this._div.innerHTML = (props ? '<h5>' + props.declara[ind].nombre + '</h5>'
+				+ '<h5>' + props.declara[ind].valor  + '</h5>' : '');
+	};
+
+	info.addTo(map);
+
+	map.removeLayer(geojson);
+
+	geojson = L.geoJson(estados, {
+		style: style7,
+		onEachFeature: onEachFeature
+	}).addTo(map);
+
+	legend.removeFrom(map);
+
+	legend.onAdd = function (map) {
+
+		var div = L.DomUtil.create('div', 'info legend'),
+		grades = [0, 30, 40, 50, 60, 70, 80, 90],
+		labels = [],
+		from, to;
+
+		for (var i = 0; i < grades.length; i++) {
+			from = grades[i];
+			to = grades[i + 1];
+
+			labels.push(
+				'<i style="background:' + getColor7(from + 1) + '"></i> ' +
+				from + (to ? '&ndash;' + to : '+'));
+		}
+
+		div.innerHTML = labels.join('<br>');
+		return div;
+	};
+
+	legend.addTo(map);
+}
+
+function pintarMapa8() {
+
+	function getColor8(d) {
+		return	d > 35 	? 	'#663300' :
+				d > 30 	? 	'#994c00' :
+				d > 25 	? 	'#cc6600' :
+				d > 20 	? 	'#ff8000' :
+				d > 15 	? 	'#ff9933' :
+				d > 10 	? 	'#ffb366' :
+				d > 5	? 	'#ffcc99' :
+							'#ffe6cc' ;
+	}
+
+	function style8(feature) {
+		return {
+			weight: 2,
+			opacity: 1,
+			color: 'white',
+			dashArray: '3',
+			fillOpacity: 0.7,
+			fillColor: getColor8(feature.properties.n_munsv[ind].valor)
+		};
+	}
+
+	info.removeFrom(map);
+
+	info.onAdd = function (map) {
+		this._div = L.DomUtil.create('div', 'info');
+		this.update();
+		return this._div;
+	}
+
+	info.update = function (props) {
+		this._div.innerHTML = (props ? '<h5>' + props.n_munsv[ind].nombre + '</h5>'
+				+ '<h5>' + props.n_munsv[ind].valor + ' % </h5>' : '');
+	};
+
+	info.addTo(map);
+
+	map.removeLayer(geojson);
+
+	geojson = L.geoJson(estados, {
+		style: style8,
+		onEachFeature: onEachFeature
+	}).addTo(map);
+
+	legend.removeFrom(map);
+
+	legend.onAdd = function (map) {
+
+		var div = L.DomUtil.create('div', 'info legend'),
+		grades = [0, 5, 10, 15, 20, 25, 30, 35],
+		labels = [],
+		from, to;
+
+		for (var i = 0; i < grades.length; i++) {
+			from = grades[i];
+			to = grades[i + 1];
+
+			labels.push(
+				'<i style="background:' + getColor8(from + 1) + '"></i> ' +
+				from + (to ? '&ndash;' + to : '+'));
+		}
+
+		div.innerHTML = labels.join('<br>');
+		return div;
+	};
+
+	legend.addTo(map);
+}
+
+
+function pintarMapa9() {
+
+	function getColor9(d) {
+		return	d > 40 		? 	'#0000cc' :
+				d > 30 		? 	'#3333ff' :
+				d > 20 		? 	'#006600' :
+				d > 10 		? 	'#00ff00' :
+				d > 0 		? 	'#66ff66' :
+				d > -10 	? 	'#ffff99' :
+				d > -20 	? 	'#ffff66' :
+				d > -30 	? 	'#ffff00' :
+				d > -40 	? 	'#cc9900' :
+				d > -50 	? 	'#663300' :
+				d > -60 	? 	'#996633' :
+				d > -70 	? 	'#604020' :
+								'#392613' ;
+	}
+
+	function style9(feature) {
+		return {
+			weight: 1,
+			opacity: 0,
+			color: 'white',
+			dashArray: '3',
+			fillOpacity: 0.7,
+			fillColor: getColor9(feature.properties.precip45[ind].valor)
+		};
+	}
+
+	info.removeFrom(map);
+
+	info.onAdd = function (map) {
+		this._div = L.DomUtil.create('div', 'info');
+		this.update();
+		return this._div;
+	}
+
+	info.update = function (props) {
+		this._div.innerHTML = (props ? '<h5>' + props.precip45[ind].nombre + '</h5>'
+				+ '<h5>' + props.precip45[ind].valor + ' ' + props.precip45[ind].unidad_medida + '</h5>' : '');
+	};
+
+	info.addTo(map);
+
+	map.removeLayer(geojson);
+
+	geojson = L.geoJson(estados2, {
+		style: style9,
+		onEachFeature: onEachFeature
+	}).addTo(map);
+
+	legend.removeFrom(map);
+
+	legend.onAdd = function (map) {
+
+		var div = L.DomUtil.create('div', 'info legend'),
+		grades = [-70, -60, -50, -40, -30, -20, -10, 0, 10, 20, 30, 40],
+		labels = [],
+		from, to;
+
+		labels.push('<i style="background: #00ff00"></i> = 50km2 <br>');
+
+		for (var i = 0; i < grades.length; i++) {
+			from = grades[i];
+			to = grades[i + 1];
+
+			labels.push(
+				'<i style="background:' + getColor9(from + 1) + '"></i> ' +
+				from + (to ? '  &ndash;  ' + to : '+'));
+		}
+
+		div.innerHTML = labels.join('<br>');
+		return div;
+	};
+
+	legend.addTo(map);
+}
+
+
+function pintarMapa10() {
+
+	function getColor10(d) {
+		return	d > 40 		? 	'#0000cc' :
+				d > 30 		? 	'#3333ff' :
+				d > 20 		? 	'#006600' :
+				d > 10 		? 	'#00ff00' :
+				d > 0 		? 	'#66ff66' :
+				d > -10 	? 	'#ffff99' :
+				d > -20 	? 	'#ffff66' :
+				d > -30 	? 	'#ffff00' :
+				d > -40 	? 	'#cc9900' :
+				d > -50 	? 	'#663300' :
+				d > -60 	? 	'#996633' :
+				d > -70 	? 	'#604020' :
+								'#392613' ;
+	}
+
+	function style10(feature) {
+		return {
+			weight: 2,
+			opacity: 0,
+			color: 'white',
+			dashArray: '3',
+			fillOpacity: 0.7,
+			fillColor: getColor10(feature.properties.precip85[ind].valor)
+		};
+	}
+
+	info.removeFrom(map);
+
+	info.onAdd = function (map) {
+		this._div = L.DomUtil.create('div', 'info');
+		this.update();
+		return this._div;
+	}
+
+	info.update = function (props) {
+		this._div.innerHTML = (props ? '<h5>' + props.precip85[ind].nombre + '</h5>'
+				+ '<h5>' + props.precip85[ind].valor + ' ' + props.precip85[ind].unidad_medida + '</h5>' : '');
+	};
+
+	info.addTo(map);
+
+	map.removeLayer(geojson);
+
+	geojson = L.geoJson(estados2, {
+		style: style10,
+		onEachFeature: onEachFeature
+	}).addTo(map);
+
+	legend.removeFrom(map);
+
+	legend.onAdd = function (map) {
+
+		var div = L.DomUtil.create('div', 'info legend'),
+		grades = [-70, -60, -50, -40, -30, -20, -10, 0, 10, 20, 30, 40],
+		labels = [],
+		from, to;
+
+		labels.push('<i style="background: #00ff00"></i> = 50km2 <br>');
+
+		for (var i = 0; i < grades.length; i++) {
+			from = grades[i];
+			to = grades[i + 1];
+
+
+			labels.push(
+				'<i style="background:' + getColor10(from + 1) + '"></i> ' +
+				from + (to ? '  &ndash;  ' + to : '+'));
+		}
+
+		div.innerHTML = labels.join('<br>');
+		return div;
+	};
+
+	legend.addTo(map);
+}
+
+
+function pintarMapa11() {
+
+	function getColor11(d) {
+		return	d > 6 		? 	'#330000' :
+				d > 5.5 	? 	'#4d0000' :
+				d > 5 		? 	'#660000' :
+				d > 4.5 	? 	'#800000' :
+				d > 4		? 	'#990000' :
+				d > 3.5 	? 	'#b30000' :
+				d > 3 		? 	'#cc0000' :
+				d > 2.5 	? 	'#ff0000' :
+				d > 2 		? 	'#ff3333' :
+				d > 1.5 	? 	'#ff6666' :
+				d > 1 		? 	'#ff9999' :
+				d > 0.5 	? 	'#ffcccc' :
+								'#ffffff' ;
+	}
+
+	function style11(feature) {
+		return {
+			weight: 2,
+			opacity: 0,
+			color: 'white',
+			dashArray: '3',
+			fillOpacity: 0.7,
+			fillColor: getColor11(feature.properties.tempmin45[ind].valor)
+		};
+	}
+
+	info.removeFrom(map);
+
+	info.onAdd = function (map) {
+		this._div = L.DomUtil.create('div', 'info');
+		this.update();
+		return this._div;
+	}
+
+	info.update = function (props) {
+		this._div.innerHTML = (props ? '<h5>' + props.tempmin45[ind].nombre + '</h5>'
+				+ '<h5>' + props.tempmin45[ind].valor + ' ' + props.tempmin45[ind].unidad_medida + '</h5>' : '');
+	};
+
+	info.addTo(map);
+
+	map.removeLayer(geojson);
+
+	geojson = L.geoJson(estados2, {
+		style: style11,
+		onEachFeature: onEachFeature
+	}).addTo(map);
+
+	legend.removeFrom(map);
+
+	legend.onAdd = function (map) {
+
+		var div = L.DomUtil.create('div', 'info legend'),
+		grades = [0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6],
+		labels = [],
+		from, to;
+
+		labels.push('<i style="background: #ff3333"></i> = 50km2 <br>');
+
+		for (var i = 0; i < grades.length; i++) {
+			from = grades[i];
+			to = grades[i + 1];
+
+
+			labels.push(
+				'<i style="background:' + getColor11(from + 1) + '"></i> ' +
+				from + (to ? '  &ndash;  ' + to : '+'));
+		}
+
+		div.innerHTML = labels.join('<br>');
+		return div;
+	};
+
+	legend.addTo(map);
+}
+
+
+function pintarMapa12() {
+
+	function getColor12(d) {
+		return	d > 6 		? 	'#330000' :
+				d > 5.5 	? 	'#4d0000' :
+				d > 5 		? 	'#660000' :
+				d > 4.5 	? 	'#800000' :
+				d > 4		? 	'#990000' :
+				d > 3.5 	? 	'#b30000' :
+				d > 3 		? 	'#cc0000' :
+				d > 2.5 	? 	'#ff0000' :
+				d > 2 		? 	'#ff3333' :
+				d > 1.5 	? 	'#ff6666' :
+				d > 1 		? 	'#ff9999' :
+				d > 0.5 	? 	'#ffcccc' :
+								'#ffffff' ;
+	}
+
+	function style12(feature) {
+		return {
+			weight: 2,
+			opacity: 0,
+			color: 'white',
+			dashArray: '3',
+			fillOpacity: 0.7,
+			fillColor: getColor12(feature.properties.tempmin85[ind].valor)
+		};
+	}
+
+	info.removeFrom(map);
+
+	info.onAdd = function (map) {
+		this._div = L.DomUtil.create('div', 'info');
+		this.update();
+		return this._div;
+	}
+
+	info.update = function (props) {
+		this._div.innerHTML = (props ? '<h5>' + props.tempmin85[ind].nombre + '</h5>'
+				+ '<h5>' + props.tempmin85[ind].valor + ' ' + props.tempmin85[ind].unidad_medida + '</h5>' : '');
+	};
+
+	info.addTo(map);
+
+	map.removeLayer(geojson);
+
+	geojson = L.geoJson(estados2, {
+		style: style12,
+		onEachFeature: onEachFeature
+	}).addTo(map);
+
+	legend.removeFrom(map);
+
+	legend.onAdd = function (map) {
+
+		var div = L.DomUtil.create('div', 'info legend'),
+		grades = [0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6],
+		labels = [],
+		from, to;
+
+		labels.push('<i style="background: #ff3333"></i> = 50km2 <br>');
+
+		for (var i = 0; i < grades.length; i++) {
+			from = grades[i];
+			to = grades[i + 1];
+
+
+			labels.push(
+				'<i style="background:' + getColor12(from + 1) + '"></i> ' +
+				from + (to ? '  &ndash;  ' + to : '+'));
+		}
+
+		div.innerHTML = labels.join('<br>');
+		return div;
+	};
+
+	legend.addTo(map);
+}
+
+
+function pintarMapa13() {
+
+	function getColor13(d) {
+		return	d > 6 		? 	'#330000' :
+				d > 5.5 	? 	'#4d0000' :
+				d > 5 		? 	'#660000' :
+				d > 4.5 	? 	'#800000' :
+				d > 4		? 	'#990000' :
+				d > 3.5 	? 	'#b30000' :
+				d > 3 		? 	'#cc0000' :
+				d > 2.5 	? 	'#ff0000' :
+				d > 2 		? 	'#ff3333' :
+				d > 1.5 	? 	'#ff6666' :
+				d > 1 		? 	'#ff9999' :
+				d > 0.5 	? 	'#ffcccc' :
+								'#ffffff' ;
+	}
+
+	function style13(feature) {
+		return {
+			weight: 2,
+			opacity: 0,
+			color: 'white',
+			dashArray: '3',
+			fillOpacity: 0.7,
+			fillColor: getColor13(feature.properties.tempmax45[ind].valor)
+		};
+	}
+
+	info.removeFrom(map);
+
+	info.onAdd = function (map) {
+		this._div = L.DomUtil.create('div', 'info');
+		this.update();
+		return this._div;
+	}
+
+	info.update = function (props) {
+		this._div.innerHTML = (props ? '<h5>' + props.tempmax45[ind].nombre + '</h5>'
+				+ '<h5>' + props.tempmax45[ind].valor + ' ' + props.tempmax45[ind].unidad_medida + '</h5>' : '');
+	};
+
+	info.addTo(map);
+
+	map.removeLayer(geojson);
+
+	geojson = L.geoJson(estados2, {
+		style: style13,
+		onEachFeature: onEachFeature
+	}).addTo(map);
+
+	legend.removeFrom(map);
+
+	legend.onAdd = function (map) {
+
+		var div = L.DomUtil.create('div', 'info legend'),
+		grades = [0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6],
+		labels = [],
+		from, to;
+
+		labels.push('<i style="background: #ff3333"></i> = 50km2 <br>');
+
+		for (var i = 0; i < grades.length; i++) {
+			from = grades[i];
+			to = grades[i + 1];
+
+
+			labels.push(
+				'<i style="background:' + getColor13(from + 1) + '"></i> ' +
+				from + (to ? '  &ndash;  ' + to : '+'));
+		}
+
+		div.innerHTML = labels.join('<br>');
+		return div;
+	};
+
+	legend.addTo(map);
+}
+
+
+function pintarMapa14() {
+
+	function getColor14(d) {
+		return	d > 6 		? 	'#330000' :
+				d > 5.5 	? 	'#4d0000' :
+				d > 5 		? 	'#660000' :
+				d > 4.5 	? 	'#800000' :
+				d > 4		? 	'#990000' :
+				d > 3.5 	? 	'#b30000' :
+				d > 3 		? 	'#cc0000' :
+				d > 2.5 	? 	'#ff0000' :
+				d > 2 		? 	'#ff3333' :
+				d > 1.5 	? 	'#ff6666' :
+				d > 1 		? 	'#ff9999' :
+				d > 0.5 	? 	'#ffcccc' :
+								'#ffffff' ;
+	}
+
+	function style14(feature) {
+		return {
+			weight: 2,
+			opacity: 0,
+			color: 'white',
+			dashArray: '3',
+			fillOpacity: 0.7,
+			fillColor: getColor14(feature.properties.tempmax85[ind].valor)
+		};
+	}
+
+	info.removeFrom(map);
+
+	info.onAdd = function (map) {
+		this._div = L.DomUtil.create('div', 'info');
+		this.update();
+		return this._div;
+	}
+
+	info.update = function (props) {
+		this._div.innerHTML = (props ? '<h5>' + props.tempmax85[ind].nombre + '</h5>'
+				+ '<h5>' + props.tempmax85[ind].valor + ' ' + props.tempmax85[ind].unidad_medida + '</h5>' : '');
+	};
+
+	info.addTo(map);
+
+	map.removeLayer(geojson);
+
+	geojson = L.geoJson(estados2, {
+		style: style14,
+		onEachFeature: onEachFeature
+	}).addTo(map);
+
+	legend.removeFrom(map);
+
+	legend.onAdd = function (map) {
+
+		var div = L.DomUtil.create('div', 'info legend'),
+		grades = [0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6],
+		labels = [],
+		from, to;
+
+		labels.push('<i style="background: #ff3333"></i> = 50km2 <br>');
+
+		for (var i = 0; i < grades.length; i++) {
+			from = grades[i];
+			to = grades[i + 1];
+
+
+			labels.push(
+				'<i style="background:' + getColor14(from + 1) + '"></i> ' +
+				from + (to ? '  &ndash;  ' + to : '+'));
+		}
+
+		div.innerHTML = labels.join('<br>');
+		return div;
+	};
+
+	legend.addTo(map);
+}
+
+$.ajax({
+	url: "data/screen3_impacto.json",
+	async: false,
+	success: function(data){
+		estados = data;
+		topEs = data;
+
+		var i = 1;
+		$.each(data.features[0].properties, function(key, value) {
+		    if(Array.isArray(value)) {
+		    	$("#opciones").append(new Option(value[0].nombre, i));
+		    	i++;
+		    }
+		});
+
+
+	},
+	error: function(err) {
+		estados = err.responseText;
+		topEs = err.responseText;
+	}
+});
+
+
+$.ajax({
+	url: "data/screen3_escenario.json",
+	async: false,
+	success: function(data) {
+		estados2 = data;
+
+		var i = $("#opciones option").last().val();
+		i++;
+		$.each(data.features[0].properties, function(key, value) {
+		    if(Array.isArray(value)) {
+		    	$("#opciones").append(new Option(value[0].nombre, i));
+		    	i++;
+		    }
+		});
+	},
+	error: function(err) {
+		estados2 = err.responseText;
+	}
+});
+
+
+
+var map = L.map('map', {zoomControl: true}).setView([25.511791, -101.080072], 5);
+
+
+		// Disable drag and zoom handlers.
+		// map.dragging.disable();
+		map.touchZoom.disable();
+		map.doubleClickZoom.disable();
+		map.scrollWheelZoom.disable();
+
+		// Disable tap handler, if present.
+		if (map.tap) map.tap.disable();
+
+		L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1Ijoib3BpIiwiYSI6ImNpanhmNjMxdDB3bXl2dGx6ZzE1Z3c0a2cifQ.WKcvY9l2AhMM6DH3FrVa6w', {
+			maxZoom: 7,
+			minZoom: 4,
+			id: 'mapbox.light'
+		}).addTo(map);
+
+		var info = L.control();
+
+		info.onAdd = function (map) {
+			this._div = L.DomUtil.create('div', 'info');
+			this.update();
+			return this._div;
+		};
+
+		info.update = function (props) {
+			this._div.innerHTML = (props ? '<h5>' + props.pmunsv[0].nombre + '</h5>'
+				+ '<h5>' + (props.pmunsv[0].valor * 100) + ' % </h5>' : '');
+		};
+
+		info.addTo(map);
+
+		function getColor(d) {
+			return 		d > 70	? 	'#3d3d29' :
+						d > 60	? 	'#5c5c3d' :
+						d > 50	? 	'#7a7a52' :
+						d > 40	? 	'#999966' :
+						d > 30	? 	'#adad85' :
+						d > 20	? 	'#c2c2a3' :
+						d > 10 	? 	'#d6d6c2' :
+									'#ebebe0' ;
+		}
+
+		function style(feature) {
+			return {
+				weight: 2,
+				opacity: 1,
+				color: 'white',
+				dashArray: '3',
+				fillOpacity: 0.7,
+				fillColor: getColor((feature.properties.pmunsv[0].valor * 100))
+			};
+		}
+
+		function highlightFeature(e) {
+			var layer = e.target;
+
+			layer.setStyle({
+				weight: 5,
+				color: '#666',
+				dashArray: '',
+				fillOpacity: 0.7
+			});
+
+			if (!L.Browser.ie && !L.Browser.opera) {
+				layer.bringToFront();
+			}
+
+			info.update(layer.feature.properties);
+		}
+
+		var geojson;
+
+		function resetHighlight(e) {
+			geojson.resetStyle(e.target);
+			info.update();
+		}
+
+		function zoomToFeature(e) {
+			map.fitBounds(e.target.getBounds());
+		}
+
+		function onEachFeature(feature, layer) {
+			layer.on({
+				mouseover: highlightFeature,
+				mouseout: resetHighlight
+			});
+		}
+
+		geojson = L.geoJson(estados, {
+			style: style,
+			onEachFeature: onEachFeature
+		}).addTo(map);
+
+
+
+		var legend = L.control({position: 'bottomleft'});
+
+		legend.onAdd = function (map) {
+
+			var div = L.DomUtil.create('div', 'info legend'),
+			grades = [0, 10, 20, 30, 40, 50, 60, 70],
+			labels = [],
+			from, to;
+
+			for (var i = 0; i < grades.length; i++) {
+				from = grades[i];
+				to = grades[i + 1];
+
+				labels.push(
+					'<i style="background:' + getColor(from + 1) + '"></i> ' +
+					from + (to ? '&ndash;' + to : '+'));
+			}
+
+			div.innerHTML = labels.join('<br>');
+			return div;
+		};
+
+		legend.addTo(map);
+
+	</script>
+	<script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+  </body>
+</html>
