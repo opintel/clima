@@ -1,0 +1,6 @@
+{
+  "name"          : "dgm-footer",
+  "dependencies"  : {
+    "dgm-footer"  : "mxabierto/dgm-footer#latest"
+  }
+}
